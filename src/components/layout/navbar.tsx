@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { List, X, CaretDown, WhatsappLogo } from "@phosphor-icons/react/ssr";
 import { primaryNav } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
@@ -15,10 +16,18 @@ export function Navbar() {
       <Container className="flex h-[72px] items-center justify-between gap-6">
         <Link
           href="/"
-          className="shrink-0 font-display text-xl tracking-tight text-foreground"
+          className="shrink-0"
           onClick={() => setMobileOpen(false)}
+          aria-label="Saiccha Developers, home"
         >
-          Saiccha Developers
+          <Image
+            src="/images/logo.png"
+            alt="Saiccha Developers"
+            width={56}
+            height={55}
+            priority
+            className="h-14 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

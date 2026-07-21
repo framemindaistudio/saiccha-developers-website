@@ -2,43 +2,46 @@
 // for the real assets (master plans, pricing, RERA numbers, brochures) this
 // needs to be replaced with before launch.
 
+// Rudra Valley content below is drawn from the client-supplied masterplan
+// walkthrough video (D:\JK\Rudra Valley.mp4, scanned 2026-07-21) — a 3D
+// visualization of the masterplan, not photography of a built site. Exact
+// figures (plot sizes, pricing, RERA number, construction status) were not
+// shown in the video and are flagged inline as pending real client data.
 export const rudraValley = {
   name: "Rudra Valley",
-  tagline: "Gated valley residences framed by the Western Ghats foothills.",
+  tagline: "A gated, canal-front plotted community built around shared clubhouse, spa, and sports amenities.",
   heroImage: "/images/hero-rudra-valley-aerial.jpg",
   cardImage: "/images/rudra-valley-villas.jpg",
-  location: "Off NH-748, Goa",
-  status: "Under Construction",
+  location: "Goa",
+  status: "Bookings Open",
   overview:
-    "Rudra Valley is a gated community of 3 and 4 BHK villas and row homes set across a landscaped valley, designed around shared green space, walkable streets, and long sightlines to the surrounding hills.",
+    "Rudra Valley is a masterplanned, gated plotted development: a grid of individually numbered plots set along a recreational canal, framed by dense forest on all sides. A single guarded entrance leads onto a palm-lined boulevard, opening into a dedicated amenity zone built around a clubhouse, spa, and sports facilities shared by the whole community.",
+  masterPlanVideo: "/videos/rudra-valley-masterplan.mp4",
+  masterPlanVideoPoster: "/images/rudra-valley-video-poster.jpg",
   masterPlan: {
-    body: "48 acres split across five residential clusters, a central spine road, a reflecting lake, and a reserved 12-acre green belt that stays undeveloped by design, not by leftover space.",
-    stats: [
-      { label: "Total land parcel", value: "48 acres" },
-      { label: "Residential clusters", value: "5" },
-      { label: "Reserved green belt", value: "12 acres" },
-      { label: "Units at full build-out", value: "310" },
-    ],
+    body: "The plan lays out numbered plots in ordered rows on either side of a central spine road, with a landscaped canal winding through the site, connected by a pedestrian bridge. Sports fields, a parking court, and a raised wooden observation tower sit near the entrance; the amenity cluster, clubhouse, spa, and wellness center anchor the community further in. Exact plot counts, sizes, and acreage are being finalized with the client and will replace this description once confirmed.",
   },
   amenities: [
-    { icon: "Drop", title: "Reflecting lake", body: "A central water body anchoring the valley's shared spaces." },
-    { icon: "Tree", title: "12-acre green belt", body: "Permanently reserved, never converted to future phases." },
-    { icon: "PersonSimpleWalk", title: "Walkable streets", body: "Traffic-calmed internal roads with dedicated footpaths." },
-    { icon: "Barbell", title: "Clubhouse & fitness", body: "Shared clubhouse with a gym, indoor games, and event lawn." },
-    { icon: "Baby", title: "Children's play area", body: "Landscaped play zones within each cluster, not just one central plot." },
-    { icon: "ShieldCheck", title: "Gated & monitored", body: "Single-entry access with round-the-clock security." },
+    { icon: "SignIn", title: "Guarded Entrance", body: "A palm-lined boulevard leads to a single monitored gatehouse entry." },
+    { icon: "Boat", title: "Recreational Canal", body: "A landscaped waterway through the site, open for kayaking, crossed by a pedestrian bridge." },
+    { icon: "Buildings", title: "Clubhouse", body: "A dedicated community building anchoring the shared amenity zone." },
+    { icon: "SwimmingPool", title: "Swimming Pool", body: "An outdoor pool with a wood-decked surround, part of the spa precinct." },
+    { icon: "FlowerLotus", title: "Spa & Lounge", body: "A spa building with an outdoor lounge and bar area alongside the pool." },
+    { icon: "Barbell", title: "Gymnasium", body: "A dedicated fitness building within the amenity cluster." },
+    { icon: "Heartbeat", title: "Wellness Center", body: "A standalone wellness building beside the clubhouse." },
+    { icon: "TennisBall", title: "Tennis Courts", body: "Two courts, one clay-surface and one hard-court, fully fenced." },
+    { icon: "Baby", title: "Children's Playground", body: "A landscaped play area with dedicated equipment near the canal." },
+    { icon: "SoccerBall", title: "Sports Fields", body: "Open turf fields for community sport, next to the main parking court." },
+    { icon: "ForkKnife", title: "Restaurant", body: "An on-site restaurant near the canal bridge, for residents and guests." },
+    { icon: "Binoculars", title: "Observation Tower", body: "A raised wooden tower overlooking the entrance and parking court." },
   ],
   layoutPlan: {
-    body: "3 BHK villas from 1,850 sq. ft., 4 BHK villas from 2,600 sq. ft., each on individual plots with private garden space.",
+    body: "Individually numbered plots are laid out in ordered rows across the masterplan grid, the majority with direct canal or road frontage. Detailed layout plans and plot-by-plot dimensions are being finalized with the client and will be added here, alongside downloadable floor plans once available.",
   },
-  pricing: [
-    { type: "3 BHK Villa", size: "1,850 - 2,100 sq. ft.", price: "From ₹1.85 Cr" },
-    { type: "4 BHK Villa", size: "2,600 - 3,050 sq. ft.", price: "From ₹2.75 Cr" },
-    { type: "4 BHK Corner Villa", size: "3,200 sq. ft.", price: "From ₹3.20 Cr" },
-  ],
+  pricing: [],
   constructionProgress: {
-    percent: 42,
-    phase: "Structural work, Clusters 1-2",
+    percent: 0,
+    phase: "Masterplan finalized. Construction status to be confirmed by the client.",
     updated: "July 2026",
   },
   brochureUrl: "#",

@@ -16,6 +16,15 @@ import {
   ChartLineUp,
   SunHorizon,
   CloudRain,
+  SignIn,
+  Boat,
+  SwimmingPool,
+  FlowerLotus,
+  Heartbeat,
+  TennisBall,
+  SoccerBall,
+  ForkKnife,
+  Binoculars,
 } from "@phosphor-icons/react/ssr";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
@@ -37,6 +46,15 @@ export const iconMap: Record<string, PhosphorIcon> = {
   ChartLineUp,
   SunHorizon,
   CloudRain,
+  SignIn,
+  Boat,
+  SwimmingPool,
+  FlowerLotus,
+  Heartbeat,
+  TennisBall,
+  SoccerBall,
+  ForkKnife,
+  Binoculars,
 };
 
 export function Icon({

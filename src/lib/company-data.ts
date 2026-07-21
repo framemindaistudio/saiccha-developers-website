@@ -19,7 +19,7 @@ export const coreValues = [
 
 export const leadership = [
   {
-    name: "Chinmay R. M",
+    name: "Founder Name Pending",
     role: "Founder & Managing Director",
     bio: "Leads project strategy and land acquisition, with a focus on developments that hold their value over decades, not just at launch.",
   },
@@ -36,10 +36,10 @@ export const leadership = [
 ];
 
 export const milestones = [
-  { year: "2014", title: "Saiccha Developers founded, first land parcels acquired in Goa" },
+  { year: "2012", title: "Saiccha Developers founded, first land parcels acquired in Goa" },
   { year: "2017", title: "First residential bungalow project completed and handed over" },
   { year: "2020", title: "First commercial complex delivered" },
-  { year: "2023", title: "Rudra Valley masterplan approved, construction begins" },
+  { year: "2023", title: "Rudra Valley masterplan approved" },
   { year: "2026", title: "JagKalyan Tarak Gurukul masterplan approved, registrations open" },
 ];
 

@@ -93,9 +93,9 @@ export const ongoingProjects: Project[] = [
   {
     slug: "rudra-valley",
     name: "Rudra Valley",
-    tagline: "Gated valley residences framed by the Western Ghats foothills.",
+    tagline: "A gated, canal-front plotted community built around shared clubhouse, spa, and sports amenities.",
     location: "Goa",
-    status: "Under Construction",
+    status: "Bookings Open",
     href: "/projects/rudra-valley",
     imageSeed: "rudra-valley-hero",
   },
@@ -111,7 +111,7 @@ export const ongoingProjects: Project[] = [
 ];
 
 export const highlights = [
-  { value: "12+", label: "Years building in Goa" },
+  { value: "14+", label: "Years building in Goa" },
   { value: "12", label: "Lakh+ sq. ft. developed" },
   { value: "3", label: "Active flagship developments" },
   { value: "100%", label: "RERA-registered projects" },

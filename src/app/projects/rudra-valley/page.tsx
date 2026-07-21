@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight } from "@phosphor-icons/react/ssr";
+import { ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { ProjectHero } from "@/components/project/project-hero";
 import { SectionNav } from "@/components/project/section-nav";
 import { ProjectSection } from "@/components/project/project-section";
-import { StatRow } from "@/components/project/stat-row";
 import { AmenitiesGrid } from "@/components/project/amenities-grid";
 import { PricingTable } from "@/components/project/pricing-table";
 import { ProgressTracker } from "@/components/project/progress-tracker";
 import { MapEmbed } from "@/components/project/map-embed";
+import { VideoPlayer } from "@/components/project/video-player";
 import { rudraValley } from "@/lib/projects-data";
 
 export const metadata: Metadata = {
@@ -22,10 +22,18 @@ const sections = [
   { id: "overview", label: "Overview" },
   { id: "master-plan", label: "Master Plan" },
   { id: "location", label: "Location Map" },
+  { id: "gallery", label: "Gallery" },
   { id: "amenities", label: "Amenities" },
   { id: "layout-plan", label: "Layout Plan" },
   { id: "pricing", label: "Pricing" },
   { id: "progress", label: "Construction Progress" },
+];
+
+const galleryFrames = [
+  { src: "/images/rudra-valley-frame-entrance.jpg", alt: "Rudra Valley, guarded entrance boulevard" },
+  { src: "/images/rudra-valley-frame-clubhouse.jpg", alt: "Rudra Valley, clubhouse and wellness center" },
+  { src: "/images/rudra-valley-frame-spa.jpg", alt: "Rudra Valley, spa and swimming pool" },
+  { src: "/images/rudra-valley-frame-canal.jpg", alt: "Rudra Valley, recreational canal" },
 ];
 
 export default function RudraValleyPage() {
@@ -54,44 +62,46 @@ export default function RudraValleyPage() {
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
               {rudraValley.masterPlan.body}
             </p>
-            <StatRow stats={rudraValley.masterPlan.stats} />
+            <VideoPlayer
+              src={rudraValley.masterPlanVideo}
+              poster={rudraValley.masterPlanVideoPoster}
+              label="Rudra Valley masterplan walkthrough"
+            />
           </ProjectSection>
 
           <ProjectSection id="location" title="Location Map">
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Located off NH-748, within easy reach of Goa&rsquo;s coastal belt and inland towns.
+              Located in Goa, within easy reach of the coastal belt and inland towns. Precise
+              coordinates and directions to be confirmed by the client.
             </p>
             <MapEmbed query="Goa, India" label={rudraValley.name} />
           </ProjectSection>
 
           <ProjectSection id="gallery" title="Gallery">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-image">
-                <Image
-                  src={rudraValley.cardImage}
-                  alt="Rudra Valley villas, exterior view"
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-image">
-                <Image
-                  src={rudraValley.heroImage}
-                  alt="Rudra Valley, aerial view of the masterplan"
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Placeholder photography. Real site and show-unit photography to be added once
-              available.
+            <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              Stills from the masterplan visualization above. Real site and show-unit
+              photography to be added as construction progresses.
             </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {galleryFrames.map((frame) => (
+                <div key={frame.src} className="relative aspect-[4/3] overflow-hidden rounded-image">
+                  <Image
+                    src={frame.src}
+                    alt={frame.alt}
+                    fill
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </ProjectSection>
 
           <ProjectSection id="amenities" title="Amenities">
+            <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              A dedicated amenity zone shared across the community, built around the clubhouse
+              and canal.
+            </p>
             <AmenitiesGrid amenities={rudraValley.amenities} />
           </ProjectSection>
 
@@ -99,13 +109,23 @@ export default function RudraValleyPage() {
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
               {rudraValley.layoutPlan.body}
             </p>
-            <div className="flex items-center gap-3 rounded-card border border-dashed border-border-strong p-6 text-sm text-muted-foreground">
-              Detailed floor plan drawings to be added once supplied by the architect.
-            </div>
           </ProjectSection>
 
           <ProjectSection id="pricing" title="Pricing">
-            <PricingTable rows={rudraValley.pricing} />
+            {rudraValley.pricing.length > 0 ? (
+              <PricingTable rows={rudraValley.pricing} />
+            ) : (
+              <div className="flex flex-col items-start gap-4 rounded-card border border-dashed border-border-strong p-6">
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Plot pricing is confirmed directly with the sales team and will be published
+                  here once finalized with the client.
+                </p>
+                <Button href="/contact" variant="secondary">
+                  <EnvelopeSimple size={16} />
+                  Enquire About Pricing
+                </Button>
+              </div>
+            )}
           </ProjectSection>
 
           <ProjectSection id="progress" title="Construction Progress">

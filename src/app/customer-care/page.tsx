@@ -31,7 +31,7 @@ export default function CustomerCarePage() {
             <div>
               <p className="text-sm font-medium text-foreground">{rudraValley.name}</p>
               <p className="text-xs text-muted-foreground">
-                {rudraValley.constructionProgress.percent}% complete &middot; updated{" "}
+                {rudraValley.constructionProgress.phase} &middot; updated{" "}
                 {rudraValley.constructionProgress.updated}
               </p>
             </div>
