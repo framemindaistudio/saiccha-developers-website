@@ -93,8 +93,8 @@ export const ongoingProjects: Project[] = [
   {
     slug: "rudra-valley",
     name: "Rudra Valley",
-    tagline: "A gated, canal-front plotted community built around shared clubhouse, spa, and sports amenities.",
-    location: "Goa",
+    tagline: "Premium farm plots and farmhouses in the misty hills of Amboli Ghat, on the Goa border.",
+    location: "Amboli Ghat, Maharashtra",
     status: "Bookings Open",
     href: "/projects/rudra-valley",
     imageSeed: "rudra-valley-hero",

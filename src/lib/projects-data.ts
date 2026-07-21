@@ -2,41 +2,64 @@
 // for the real assets (master plans, pricing, RERA numbers, brochures) this
 // needs to be replaced with before launch.
 
-// Rudra Valley content below is drawn from the client-supplied masterplan
-// walkthrough video (D:\JK\Rudra Valley.mp4, scanned 2026-07-21) — a 3D
-// visualization of the masterplan, not photography of a built site. Exact
-// figures (plot sizes, pricing, RERA number, construction status) were not
-// shown in the video and are flagged inline as pending real client data.
+// Rudra Valley content below is drawn from two client-supplied videos
+// (D:\JK\Rudra Valley.mp4, a silent 3D masterplan visualization, and
+// D:\JK\Rudra Vellay 2.mp4, a narrated brand film with spoken facts and
+// figures), both scanned 2026-07-21 via scene-by-scene AI video analysis.
+// Neither video file is checked into the repo, only the information
+// extracted from them. Figures below (acreage, distances, amenity count)
+// are as stated in the narration; pricing, exact plot sizes, RERA number,
+// and construction status were not given in either video and are flagged
+// inline as pending real client confirmation.
 export const rudraValley = {
   name: "Rudra Valley",
-  tagline: "A gated, canal-front plotted community built around shared clubhouse, spa, and sports amenities.",
+  tagline: "Premium farm plots and farmhouses in the misty hills of Amboli Ghat, on the Goa border.",
   heroImage: "/images/hero-rudra-valley-aerial.jpg",
   cardImage: "/images/rudra-valley-villas.jpg",
-  location: "Goa",
+  location: "Amboli Ghat, Maharashtra",
   status: "Bookings Open",
   overview:
-    "Rudra Valley is a masterplanned, gated plotted development: a grid of individually numbered plots set along a recreational canal, framed by dense forest on all sides. A single guarded entrance leads onto a palm-lined boulevard, opening into a dedicated amenity zone built around a clubhouse, spa, and sports facilities shared by the whole community.",
-  masterPlanVideo: "/videos/rudra-valley-masterplan.mp4",
-  masterPlanVideoPoster: "/images/rudra-valley-video-poster.jpg",
+    "Rudra Valley is a premium farm-plot and farmhouse development in Amboli Ghat, a misty hill pass on the Goa-Maharashtra border known for its waterfalls, viewpoints, and forest. Phase 1 spans 233 acres; the wider Phase 2 vision extends to 467 acres and includes a dedicated 48-acre luxury resort. The development is laid out as a grid of individually numbered plots along a recreational canal, entered through a single guarded gatehouse and anchored by a shared clubhouse and amenity zone.",
   masterPlan: {
-    body: "The plan lays out numbered plots in ordered rows on either side of a central spine road, with a landscaped canal winding through the site, connected by a pedestrian bridge. Sports fields, a parking court, and a raised wooden observation tower sit near the entrance; the amenity cluster, clubhouse, spa, and wellness center anchor the community further in. Exact plot counts, sizes, and acreage are being finalized with the client and will replace this description once confirmed.",
+    body: "Phase 1 (233 acres) lays out numbered farm plots in ordered rows along a central spine road and a landscaped recreational canal, crossed by a pedestrian bridge, with sports fields, parking, and a viewing deck near the entrance. Phase 2 (467 acres) expands the vision with a 48-acre luxury resort, additional farmhouses, and a working tea plantation. Exact plot counts, sizes, and phase-by-phase acreage breakdowns are being finalized with the client.",
+  },
+  nearby: {
+    body: "Amboli Ghat sits close to both Goa and several regional airports, with a major highway upgrade planned nearby.",
+    connectivity: [
+      { label: "Goa International Airport", value: "50 km" },
+      { label: "Upcoming Goa-Nagpur Shaktipath highway", value: "800 m" },
+      { label: "Malvan Airport", value: "70 km" },
+      { label: "Belgaum Airport", value: "80 km" },
+      { label: "Kolhapur Airport", value: "95 km" },
+    ],
+    attractions: [
+      "Amboli's waterfalls and the Kavlesad reverse waterfall",
+      "Napharde Waterfalls (10 km)",
+      "Shirgaonkar sunset point",
+      "Hiranyakeshi Temple (3 km)",
+      "Manoharghad Fort (2.5 km)",
+      "Shiroda and Keri beaches",
+    ],
   },
   amenities: [
-    { icon: "SignIn", title: "Guarded Entrance", body: "A palm-lined boulevard leads to a single monitored gatehouse entry." },
+    { icon: "SignIn", title: "Guarded Entrance", body: "A single monitored gatehouse entry into the community." },
     { icon: "Boat", title: "Recreational Canal", body: "A landscaped waterway through the site, open for kayaking, crossed by a pedestrian bridge." },
     { icon: "Buildings", title: "Clubhouse", body: "A dedicated community building anchoring the shared amenity zone." },
+    { icon: "Barbell", title: "Five-Star Gymnasium", body: "A fully equipped fitness center within the amenity cluster." },
     { icon: "SwimmingPool", title: "Swimming Pool", body: "An outdoor pool with a wood-decked surround, part of the spa precinct." },
-    { icon: "FlowerLotus", title: "Spa & Lounge", body: "A spa building with an outdoor lounge and bar area alongside the pool." },
-    { icon: "Barbell", title: "Gymnasium", body: "A dedicated fitness building within the amenity cluster." },
-    { icon: "Heartbeat", title: "Wellness Center", body: "A standalone wellness building beside the clubhouse." },
-    { icon: "TennisBall", title: "Tennis Courts", body: "Two courts, one clay-surface and one hard-court, fully fenced." },
-    { icon: "Baby", title: "Children's Playground", body: "A landscaped play area with dedicated equipment near the canal." },
+    { icon: "FlowerLotus", title: "Spa Center", body: "A spa building with treatment rooms, lounge, and bar area." },
+    { icon: "Heartbeat", title: "Health Center", body: "An on-site clinic offering preventive and everyday care for residents." },
+    { icon: "Drop", title: "Bathing Deck", body: "An outdoor deck with a hot tub and wood-fired sauna barrel." },
+    { icon: "Binoculars", title: "Viewing Deck", body: "A raised deck overlooking the valley and surrounding hills." },
+    { icon: "TennisBall", title: "Tennis Lawn", body: "An on-site tennis court for residents." },
+    { icon: "Baby", title: "Children's Park", body: "A dedicated playground with play equipment for younger residents." },
+    { icon: "Leaf", title: "Spice Garden", body: "A cultivated garden of native spice plants within the community." },
     { icon: "SoccerBall", title: "Sports Fields", body: "Open turf fields for community sport, next to the main parking court." },
-    { icon: "ForkKnife", title: "Restaurant", body: "An on-site restaurant near the canal bridge, for residents and guests." },
-    { icon: "Binoculars", title: "Observation Tower", body: "A raised wooden tower overlooking the entrance and parking court." },
+    { icon: "ForkKnife", title: "Restaurant", body: "An on-site restaurant for residents and guests." },
+    { icon: "Sailboat", title: "River Rafting", body: "White-water rafting on the nearby river, organized for residents." },
   ],
   layoutPlan: {
-    body: "Individually numbered plots are laid out in ordered rows across the masterplan grid, the majority with direct canal or road frontage. Detailed layout plans and plot-by-plot dimensions are being finalized with the client and will be added here, alongside downloadable floor plans once available.",
+    body: "Individually numbered farm plots are laid out in ordered rows across the Phase 1 masterplan grid, the majority with direct canal or road frontage; farmhouses and resort-adjacent plots follow in Phase 2. Detailed layout plans and plot-by-plot dimensions are being finalized with the client and will be added here, alongside downloadable floor plans once available.",
   },
   pricing: [],
   constructionProgress: {

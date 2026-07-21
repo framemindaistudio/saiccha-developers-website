@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw video source files (too large for git; host on Vercel Blob / a CDN
+# instead and reference by URL if a video is ever actually embedded)
+/public/videos/
+*.mp4
+*.mov
+*.webm

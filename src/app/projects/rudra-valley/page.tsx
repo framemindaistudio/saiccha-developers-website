@@ -10,7 +10,6 @@ import { AmenitiesGrid } from "@/components/project/amenities-grid";
 import { PricingTable } from "@/components/project/pricing-table";
 import { ProgressTracker } from "@/components/project/progress-tracker";
 import { MapEmbed } from "@/components/project/map-embed";
-import { VideoPlayer } from "@/components/project/video-player";
 import { rudraValley } from "@/lib/projects-data";
 
 export const metadata: Metadata = {
@@ -30,6 +29,7 @@ const sections = [
 ];
 
 const galleryFrames = [
+  { src: "/images/rudra-valley-video-poster.jpg", alt: "Rudra Valley, aerial masterplan view" },
   { src: "/images/rudra-valley-frame-entrance.jpg", alt: "Rudra Valley, guarded entrance boulevard" },
   { src: "/images/rudra-valley-frame-clubhouse.jpg", alt: "Rudra Valley, clubhouse and wellness center" },
   { src: "/images/rudra-valley-frame-spa.jpg", alt: "Rudra Valley, spa and swimming pool" },
@@ -62,25 +62,55 @@ export default function RudraValleyPage() {
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
               {rudraValley.masterPlan.body}
             </p>
-            <VideoPlayer
-              src={rudraValley.masterPlanVideo}
-              poster={rudraValley.masterPlanVideoPoster}
-              label="Rudra Valley masterplan walkthrough"
-            />
+            <div className="relative aspect-video overflow-hidden rounded-image">
+              <Image
+                src="/images/rudra-valley-video-poster.jpg"
+                alt="Rudra Valley masterplan, aerial view"
+                fill
+                sizes="(min-width: 1024px) 800px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </ProjectSection>
 
           <ProjectSection id="location" title="Location Map">
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Located in Goa, within easy reach of the coastal belt and inland towns. Precise
-              coordinates and directions to be confirmed by the client.
+              {rudraValley.nearby.body} Precise coordinates and driving directions to be
+              confirmed by the client.
             </p>
-            <MapEmbed query="Goa, India" label={rudraValley.name} />
+            <MapEmbed query="Amboli Ghat, Maharashtra, India" label={rudraValley.name} />
+
+            <div className="grid gap-8 sm:grid-cols-2">
+              <div className="flex flex-col gap-3">
+                <h3 className="text-sm font-medium text-muted-foreground">Connectivity</h3>
+                <div className="flex flex-col divide-y divide-border">
+                  {rudraValley.nearby.connectivity.map((item) => (
+                    <div key={item.label} className="flex items-center justify-between py-2.5">
+                      <span className="text-sm text-foreground">{item.label}</span>
+                      <span className="text-sm font-medium tabular-nums text-primary">
+                        {item.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <h3 className="text-sm font-medium text-muted-foreground">Nearby Attractions</h3>
+                <ul className="flex flex-col gap-2.5">
+                  {rudraValley.nearby.attractions.map((item) => (
+                    <li key={item} className="text-sm leading-relaxed text-foreground">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </ProjectSection>
 
           <ProjectSection id="gallery" title="Gallery">
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Stills from the masterplan visualization above. Real site and show-unit
-              photography to be added as construction progresses.
+              Stills from the masterplan visualization. Real site and show-unit photography to
+              be added as construction progresses.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               {galleryFrames.map((frame) => (
