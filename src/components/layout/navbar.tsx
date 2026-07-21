@@ -6,7 +6,6 @@ import { List, X, CaretDown, WhatsappLogo } from "@phosphor-icons/react/ssr";
 import { primaryNav } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,13 +25,16 @@ export function Navbar() {
           {primaryNav.map((item) =>
             item.items ? (
               <div key={item.label} className="group relative">
-                <button
-                  className="flex cursor-pointer items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-                  type="button"
+                <Link
+                  href={item.href}
+                  className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
                 >
                   {item.label}
                   <CaretDown size={14} weight="bold" />
-                </button>
+                </Link>
+                {/* Hover/focus flyout: a bonus for mouse and keyboard users. The
+                    trigger above is a real link, so tap-only devices (which
+                    can't rely on :hover) still navigate reliably on tap. */}
                 <div className="invisible absolute top-full left-0 pt-2 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
                   <div className="min-w-56 rounded-card border border-border bg-surface-raised p-2 shadow-lg shadow-foreground/5">
                     {item.items.map((sub) => (
@@ -83,29 +85,18 @@ export function Navbar() {
         </button>
       </Container>
 
-      <div
-        className={cn(
-          "grid overflow-hidden border-t border-border bg-surface transition-[grid-template-rows] duration-300 ease-out lg:hidden",
-          mobileOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        )}
-      >
-        <div className="min-h-0">
+      {mobileOpen ? (
+        <div className="border-t border-border bg-surface lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {primaryNav.map((item) => (
               <div key={item.label} className="py-1">
-                {item.items ? (
-                  <span className="block py-2 text-base font-medium text-foreground">
-                    {item.label}
-                  </span>
-                ) : (
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2 text-base font-medium text-foreground"
-                  >
-                    {item.label}
-                  </Link>
-                )}
+                <Link
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-2 text-base font-medium text-foreground"
+                >
+                  {item.label}
+                </Link>
                 {item.items ? (
                   <div className="ml-3 flex flex-col border-l border-border pl-3">
                     {item.items.map((sub) => (
@@ -127,7 +118,7 @@ export function Navbar() {
             </Button>
           </Container>
         </div>
-      </div>
+      ) : null}
     </header>
   );
 }
