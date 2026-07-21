@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import { UtilityBar } from "@/components/layout/utility-bar";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       className={`${bodoniModa.variable} ${interTight.variable} antialiased`}
     >
       <body className="flex min-h-screen flex-col bg-background text-foreground">
+        <UtilityBar />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

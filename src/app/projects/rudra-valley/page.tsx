@@ -193,11 +193,7 @@ export default function RudraValleyPage() {
               Book a guided site visit, weekday or weekend slots available.
             </p>
           </div>
-          <Button
-            href="/contact"
-            size="lg"
-            className="bg-on-primary text-primary hover:bg-on-primary/90"
-          >
+          <Button href="/contact" size="lg">
             Book a Site Visit
             <ArrowRight size={18} />
           </Button>

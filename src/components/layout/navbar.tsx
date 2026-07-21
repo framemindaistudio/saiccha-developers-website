@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { List, X, CaretDown, WhatsappLogo } from "@phosphor-icons/react/ssr";
-import { primaryNav } from "@/lib/site-data";
+import { primaryNav, memberLinks } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 
@@ -122,6 +122,26 @@ export function Navbar() {
                 ) : null}
               </div>
             ))}
+            <div className="mt-4 flex items-center gap-3 border-t border-border pt-4">
+              <a
+                href={memberLinks.signIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="flex-1 rounded-button border border-border-strong py-2.5 text-center text-sm font-medium text-foreground"
+              >
+                Sign In
+              </a>
+              <a
+                href={memberLinks.signUp}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="flex-1 rounded-button bg-accent py-2.5 text-center text-sm font-medium text-on-accent"
+              >
+                Sign Up
+              </a>
+            </div>
             <Button href="/contact" className="mt-3 w-full">
               Book a Site Visit
             </Button>

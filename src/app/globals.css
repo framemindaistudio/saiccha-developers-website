@@ -1,40 +1,44 @@
 @import "tailwindcss";
 
 /*
-  Saiccha Developers — "Deep Field" design system
-  Light-only by intent: this is a photography-led, editorial-premium real
-  estate brand. Natural light and warm stone read as trust + craft; a dark
-  mode would work against that. Revisit if the brand direction changes.
+  Saiccha Developers — brand palette sampled directly from the client logo
+  (navy field #041c42, gold #c9982e). Navy carries dark sections, text, and
+  icon/link accents; gold is reserved for action (button fills, focus ring,
+  a few dark-background highlights) so it stays "the color that means act,"
+  not decoration. Light-only by intent: photography-led real estate brand,
+  natural light reads as trust; a dark mode would work against that.
 */
 
 :root {
-  /* Core surfaces */
-  --color-background: #eff1ea;
-  --color-surface: #f8f9f5;
+  /* Core surfaces — warm-neutral, cooler than a cream/beige default */
+  --color-background: #f5f5f1;
+  --color-surface: #fbfaf7;
   --color-surface-raised: #ffffff;
-  --color-foreground: #16231c;
-  --color-muted-foreground: #59645c;
+  --color-foreground: #10192b;
+  --color-muted-foreground: #5b6472;
 
-  /* Brand: deep forest green (trust + premium + eco-living identity) */
-  --color-primary: #1f4a3a;
-  --color-primary-hover: #163527;
-  --color-on-primary: #f6f7f1;
+  /* Brand: deep navy, sampled from the logo field */
+  --color-primary: #0b1f3f;
+  --color-primary-hover: #071730;
+  --color-on-primary: #f7f8fa;
 
-  /* Secondary: soft sage, for subtle fills/badges */
-  --color-secondary: #dbe3d8;
-  --color-on-secondary: #16231c;
+  /* Action: gold, sampled from the logo's building icon + ribbon */
+  --color-accent: #c9982e;
+  --color-accent-hover: #a87c22;
+  --color-on-accent: #10192b;
 
-  /* Rare accent: warm brass, micro-use only (award marks, dividers) — never a CTA fill */
-  --color-brass: #a3793f;
+  /* Secondary: soft gold-tinted neutral, for subtle fills/badges */
+  --color-secondary: #f0e6cc;
+  --color-on-secondary: #10192b;
 
-  --color-border: #dcdfd3;
-  --color-border-strong: #b9c2b3;
+  --color-border: #e1ded3;
+  --color-border-strong: #c7c1ae;
 
   --color-destructive: #a3342a;
   --color-on-destructive: #ffffff;
   --color-success: #2f6b4f;
 
-  --color-ring: #1f4a3a;
+  --color-ring: #c9982e;
 
   /* Shape consistency lock: pills for buttons, soft radius for cards/images/inputs */
   --radius-button: 999px;
@@ -56,10 +60,12 @@
   --color-primary-hover: var(--color-primary-hover);
   --color-on-primary: var(--color-on-primary);
 
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-on-accent: var(--color-on-accent);
+
   --color-secondary: var(--color-secondary);
   --color-on-secondary: var(--color-on-secondary);
-
-  --color-brass: var(--color-brass);
 
   --color-border: var(--color-border);
   --color-border-strong: var(--color-border-strong);
@@ -95,8 +101,8 @@
   }
 
   ::selection {
-    background: var(--color-primary);
-    color: var(--color-on-primary);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
   }
 
   :focus-visible {

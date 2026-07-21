@@ -13,6 +13,13 @@ export type NavGroup = {
   items?: NavLink[];
 };
 
+// The client's existing member system, hosted separately from this site.
+// Sign in / Sign up intentionally link out rather than to local routes.
+export const memberLinks = {
+  signIn: "https://saiccha.live/MemberPanel/Default.aspx",
+  signUp: "https://saiccha.live/joinus.html",
+};
+
 export const primaryNav: NavGroup[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
