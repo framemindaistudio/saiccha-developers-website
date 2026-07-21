@@ -28,12 +28,16 @@ const sections = [
   { id: "progress", label: "Construction Progress" },
 ];
 
+const featuredGalleryImage = {
+  src: "/images/rv-cinematic-canal.jpg",
+  alt: "Rudra Valley, recreational canal at golden hour",
+};
+
 const galleryFrames = [
-  { src: "/images/rudra-valley-video-poster.jpg", alt: "Rudra Valley, aerial masterplan view" },
-  { src: "/images/rudra-valley-frame-entrance.jpg", alt: "Rudra Valley, guarded entrance boulevard" },
-  { src: "/images/rudra-valley-frame-clubhouse.jpg", alt: "Rudra Valley, clubhouse and wellness center" },
-  { src: "/images/rudra-valley-frame-spa.jpg", alt: "Rudra Valley, spa and swimming pool" },
-  { src: "/images/rudra-valley-frame-canal.jpg", alt: "Rudra Valley, recreational canal" },
+  { src: "/images/rv-cinematic-clubhouse.jpg", alt: "Rudra Valley, clubhouse and wellness center" },
+  { src: "/images/rv-cinematic-spa.jpg", alt: "Rudra Valley, spa and swimming pool" },
+  { src: "/images/rv-cinematic-tennis.jpg", alt: "Rudra Valley, tennis court at dusk" },
+  { src: "/images/rv-cinematic-restaurant.jpg", alt: "Rudra Valley, bridge to the restaurant" },
 ];
 
 export default function RudraValleyPage() {
@@ -64,8 +68,8 @@ export default function RudraValleyPage() {
             </p>
             <div className="relative aspect-video overflow-hidden rounded-image">
               <Image
-                src="/images/rudra-valley-video-poster.jpg"
-                alt="Rudra Valley masterplan, aerial view"
+                src="/images/rv-cinematic-aerial.jpg"
+                alt="Rudra Valley masterplan, aerial view at golden hour"
                 fill
                 sizes="(min-width: 1024px) 800px, 100vw"
                 className="object-cover"
@@ -109,21 +113,32 @@ export default function RudraValleyPage() {
 
           <ProjectSection id="gallery" title="Gallery">
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Stills from the masterplan visualization. Real site and show-unit photography to
+              Renders from the masterplan visualization. Real site and show-unit photography to
               be added as construction progresses.
             </p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {galleryFrames.map((frame) => (
-                <div key={frame.src} className="relative aspect-[4/3] overflow-hidden rounded-image">
-                  <Image
-                    src={frame.src}
-                    alt={frame.alt}
-                    fill
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
+            <div className="flex flex-col gap-4">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-image">
+                <Image
+                  src={featuredGalleryImage.src}
+                  alt={featuredGalleryImage.alt}
+                  fill
+                  sizes="(min-width: 1024px) 800px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {galleryFrames.map((frame) => (
+                  <div key={frame.src} className="relative aspect-[4/3] overflow-hidden rounded-image">
+                    <Image
+                      src={frame.src}
+                      alt={frame.alt}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </ProjectSection>
 

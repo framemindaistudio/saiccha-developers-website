@@ -14,8 +14,8 @@
 export const rudraValley = {
   name: "Rudra Valley",
   tagline: "Premium farm plots and farmhouses in the misty hills of Amboli Ghat, on the Goa border.",
-  heroImage: "/images/hero-rudra-valley-aerial.jpg",
-  cardImage: "/images/rudra-valley-villas.jpg",
+  heroImage: "/images/rv-cinematic-entrance.jpg",
+  cardImage: "/images/rv-cinematic-aerial.jpg",
   location: "Amboli Ghat, Maharashtra",
   status: "Bookings Open",
   overview:

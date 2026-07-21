@@ -7,7 +7,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { ongoingProjects } from "@/lib/site-data";
 
 const projectImages: Record<string, string> = {
-  "rudra-valley": "/images/rudra-valley-villas.jpg",
+  "rudra-valley": "/images/rv-cinematic-aerial.jpg",
   "jagkalyan-tarak-gurukul": "/images/jagkalyan-eco-campus.jpg",
 };
 

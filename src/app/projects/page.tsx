@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const projectImages: Record<string, string> = {
-  "rudra-valley": "/images/rudra-valley-villas.jpg",
+  "rudra-valley": "/images/rv-cinematic-aerial.jpg",
   "jagkalyan-tarak-gurukul": "/images/jagkalyan-eco-campus.jpg",
 };
 
