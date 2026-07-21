@@ -40,7 +40,7 @@ export default function RudraValleyPage() {
         brochureUrl={rudraValley.brochureUrl}
       />
 
-      <Container className="grid gap-12 py-16 lg:grid-cols-[200px_1fr] lg:gap-16 lg:py-24">
+      <Container className="grid gap-12 pb-16 lg:grid-cols-[200px_1fr] lg:gap-16 lg:pb-24">
         <SectionNav sections={sections} />
 
         <div className="flex flex-col">
