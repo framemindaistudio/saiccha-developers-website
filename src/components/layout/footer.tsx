@@ -25,13 +25,15 @@ export function Footer() {
     <footer className="bg-primary text-on-primary">
       <Container className="grid gap-14 py-20 lg:grid-cols-[1.3fr_2fr] lg:gap-10">
         <div className="flex flex-col gap-6">
-          <Image
-            src="/images/logo.png"
-            alt="Saiccha Developers"
-            width={72}
-            height={71}
-            className="h-[72px] w-auto"
-          />
+          <div className="w-fit rounded-card bg-surface-raised p-3">
+            <Image
+              src="/images/logo.png"
+              alt="Saiccha Developers"
+              width={72}
+              height={71}
+              className="h-14 w-auto"
+            />
+          </div>
           <p className="max-w-sm text-sm leading-relaxed text-on-primary/75">
             Premium, transparent real estate development in Goa — from land to landmark.
           </p>
