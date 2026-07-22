@@ -21,7 +21,7 @@ export function QuickEnquiry() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
               >
-                <WhatsappLogo size={20} className="text-primary" />
+                <WhatsappLogo size={20} weight="fill" className="text-whatsapp" />
                 +91 80730 87576 (WhatsApp)
               </a>
               <a
