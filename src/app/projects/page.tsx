@@ -30,6 +30,33 @@ export default function ProjectsPage() {
       />
 
       <Container className="max-w-4xl">
+        <Reveal className="grid gap-6 pb-14 pt-20 sm:grid-cols-3 md:pt-24">
+          <a href="#ongoing" className="flex flex-col gap-1.5">
+            <span className="text-sm font-medium uppercase tracking-wide text-primary">
+              Ongoing
+            </span>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Rudra Valley&rsquo;s farm plots, and JagKalyan Tarak Gurukul on its own site.
+            </p>
+          </a>
+          <a href="#completed" className="flex flex-col gap-1.5">
+            <span className="text-sm font-medium uppercase tracking-wide text-primary">
+              Completed
+            </span>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Land, bungalows, and commercial complexes already delivered.
+            </p>
+          </a>
+          <a href="#future" className="flex flex-col gap-1.5">
+            <span className="text-sm font-medium uppercase tracking-wide text-primary">
+              Future
+            </span>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              What&rsquo;s coming next as the company grows.
+            </p>
+          </a>
+        </Reveal>
+
         <ProjectSection id="ongoing" title="Ongoing Projects">
           <Reveal>
             <Link href={project.href} className="group grid gap-6 sm:grid-cols-2 sm:items-center sm:gap-8">

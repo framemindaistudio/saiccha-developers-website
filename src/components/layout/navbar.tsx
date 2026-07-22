@@ -32,7 +32,7 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-1 lg:flex">
           {primaryNav.map((item) =>
-            item.items ? (
+            item.items || item.sections ? (
               <div key={item.label} className="group relative">
                 <Link
                   href={item.href}
@@ -46,15 +46,39 @@ export function Navbar() {
                     can't rely on :hover) still navigate reliably on tap. */}
                 <div className="invisible absolute top-full left-0 pt-2 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
                   <div className="min-w-56 rounded-card border border-border bg-surface-raised p-2 shadow-lg shadow-foreground/5">
-                    {item.items.map((sub) => (
-                      <Link
-                        key={sub.href}
-                        href={sub.href}
-                        className="block rounded-lg px-4 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
-                      >
-                        {sub.label}
-                      </Link>
-                    ))}
+                    {item.sections
+                      ? item.sections.map((section, i) => (
+                          <div
+                            key={section.heading ?? i}
+                            className={i > 0 ? "mt-1 border-t border-border pt-1" : undefined}
+                          >
+                            {section.heading ? (
+                              <div className="px-4 pt-2 pb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                {section.heading}
+                              </div>
+                            ) : null}
+                            {section.links.map((sub) => (
+                              <Link
+                                key={sub.href}
+                                href={sub.href}
+                                target={sub.external ? "_blank" : undefined}
+                                rel={sub.external ? "noopener noreferrer" : undefined}
+                                className="block rounded-lg px-4 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
+                              >
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ))
+                      : item.items?.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            className="block rounded-lg px-4 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
                   </div>
                 </div>
               </div>
@@ -106,7 +130,31 @@ export function Navbar() {
                 >
                   {item.label}
                 </Link>
-                {item.items ? (
+                {item.sections ? (
+                  <div className="ml-3 flex flex-col gap-2 border-l border-border pl-3">
+                    {item.sections.map((section, i) => (
+                      <div key={section.heading ?? i} className="flex flex-col">
+                        {section.heading ? (
+                          <span className="pt-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                            {section.heading}
+                          </span>
+                        ) : null}
+                        {section.links.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            target={sub.external ? "_blank" : undefined}
+                            rel={sub.external ? "noopener noreferrer" : undefined}
+                            onClick={() => setMobileOpen(false)}
+                            className="py-2 text-sm text-muted-foreground"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                ) : item.items ? (
                   <div className="ml-3 flex flex-col border-l border-border pl-3">
                     {item.items.map((sub) => (
                       <Link

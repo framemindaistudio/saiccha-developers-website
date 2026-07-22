@@ -5,12 +5,19 @@
 export type NavLink = {
   label: string;
   href: string;
+  external?: boolean;
+};
+
+export type NavSection = {
+  heading?: string;
+  links: NavLink[];
 };
 
 export type NavGroup = {
   label: string;
   href: string;
   items?: NavLink[];
+  sections?: NavSection[];
 };
 
 export const primaryNav: NavGroup[] = [
@@ -19,10 +26,24 @@ export const primaryNav: NavGroup[] = [
   {
     label: "Projects",
     href: "/projects",
-    items: [
-      { label: "Rudra Valley", href: "/projects/rudra-valley" },
-      { label: "Completed Projects", href: "/projects/completed" },
-      { label: "Future Projects", href: "/projects/future" },
+    sections: [
+      {
+        heading: "Ongoing Projects",
+        links: [
+          { label: "Rudra Valley", href: "/projects/rudra-valley" },
+          {
+            label: "JagKalyan Tarak Gurukul",
+            href: "https://jagkalyan-tarak-gurukul-website.vercel.app/",
+            external: true,
+          },
+        ],
+      },
+      {
+        links: [
+          { label: "Completed Projects", href: "/projects/completed" },
+          { label: "Future Projects", href: "/projects/future" },
+        ],
+      },
     ],
   },
   { label: "Services", href: "/services" },
