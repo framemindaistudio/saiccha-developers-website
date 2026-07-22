@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { TextEffect } from "@/components/motion/text-effect";
 
 export function SectionHeading({
   title,
@@ -21,9 +22,14 @@ export function SectionHeading({
         className
       )}
     >
-      <h2 className="font-display text-3xl leading-[1.1] tracking-tight md:text-4xl lg:text-5xl">
+      <TextEffect
+        as="h2"
+        per="word"
+        preset="slide"
+        className="font-display text-3xl leading-[1.1] tracking-tight md:text-4xl lg:text-5xl"
+      >
         {title}
-      </h2>
+      </TextEffect>
       {subtitle ? (
         <p
           className={cn(

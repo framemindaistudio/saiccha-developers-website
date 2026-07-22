@@ -3,6 +3,7 @@ import { ArrowRight } from "@phosphor-icons/react/ssr";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
+import { AnimatedTextCycle } from "@/components/motion/animated-text-cycle";
 
 export function Hero() {
   return (
@@ -20,6 +21,13 @@ export function Hero() {
 
       <Container className="relative z-10 pb-20 pt-32">
         <Reveal className="flex max-w-xl flex-col gap-6">
+          <div className="flex items-center gap-1.5 text-sm font-medium text-on-primary/70">
+            <span>Now building</span>
+            <AnimatedTextCycle
+              words={["Rudra Valley", "JagKalyan Tarak Gurukul"]}
+              className="text-accent"
+            />
+          </div>
           <h1 className="font-display text-5xl leading-[1.05] tracking-tight text-on-primary md:text-6xl lg:text-7xl">
             Build Better.
             <br />

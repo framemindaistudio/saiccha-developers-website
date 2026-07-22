@@ -10,6 +10,10 @@ import { AmenitiesGrid } from "@/components/project/amenities-grid";
 import { PricingTable } from "@/components/project/pricing-table";
 import { ProgressTracker } from "@/components/project/progress-tracker";
 import { MapEmbed } from "@/components/project/map-embed";
+import { StatHighlightGrid } from "@/components/project/stat-highlight-grid";
+import { PhaseBar } from "@/components/project/phase-bar";
+import { ZoomParallax } from "@/components/motion/zoom-parallax";
+import { Icon } from "@/lib/icon-map";
 import { rudraValley } from "@/lib/projects-data";
 
 export const metadata: Metadata = {
@@ -28,16 +32,12 @@ const sections = [
   { id: "progress", label: "Construction Progress" },
 ];
 
-const featuredGalleryImage = {
-  src: "/images/rv-cinematic-canal.jpg",
-  alt: "Rudra Valley, recreational canal at golden hour",
-};
-
-const galleryFrames = [
+const zoomGalleryImages = [
+  { src: "/images/rv-cinematic-canal.jpg", alt: "Rudra Valley, recreational canal at golden hour" },
+  { src: "/images/rv-cinematic-entrance.jpg", alt: "Rudra Valley, guarded entrance boulevard" },
   { src: "/images/rv-cinematic-clubhouse.jpg", alt: "Rudra Valley, clubhouse and wellness center" },
   { src: "/images/rv-cinematic-spa.jpg", alt: "Rudra Valley, spa and swimming pool" },
   { src: "/images/rv-cinematic-tennis.jpg", alt: "Rudra Valley, tennis court at dusk" },
-  { src: "/images/rv-cinematic-restaurant.jpg", alt: "Rudra Valley, bridge to the restaurant" },
 ];
 
 export default function RudraValleyPage() {
@@ -66,6 +66,13 @@ export default function RudraValleyPage() {
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
               {rudraValley.masterPlan.body}
             </p>
+            <StatHighlightGrid stats={rudraValley.masterPlan.stats} />
+            <div className="flex flex-col gap-2 rounded-card border border-border bg-surface p-5">
+              <span className="text-xs font-medium text-muted-foreground">
+                Total vision, by phase
+              </span>
+              <PhaseBar phases={rudraValley.masterPlan.phases} />
+            </div>
             <div className="relative aspect-video overflow-hidden rounded-image">
               <Image
                 src="/images/rv-cinematic-aerial.jpg"
@@ -89,9 +96,10 @@ export default function RudraValleyPage() {
                 <h3 className="text-sm font-medium text-muted-foreground">Connectivity</h3>
                 <div className="flex flex-col divide-y divide-border">
                   {rudraValley.nearby.connectivity.map((item) => (
-                    <div key={item.label} className="flex items-center justify-between py-2.5">
-                      <span className="text-sm text-foreground">{item.label}</span>
-                      <span className="text-sm font-medium tabular-nums text-primary">
+                    <div key={item.label} className="flex items-center gap-3 py-2.5">
+                      <Icon name={item.icon} size={18} className="shrink-0 text-accent" />
+                      <span className="flex-1 text-sm text-foreground">{item.label}</span>
+                      <span className="shrink-0 text-sm font-medium tabular-nums text-primary">
                         {item.value}
                       </span>
                     </div>
@@ -100,10 +108,11 @@ export default function RudraValleyPage() {
               </div>
               <div className="flex flex-col gap-3">
                 <h3 className="text-sm font-medium text-muted-foreground">Nearby Attractions</h3>
-                <ul className="flex flex-col gap-2.5">
+                <ul className="flex flex-col gap-3">
                   {rudraValley.nearby.attractions.map((item) => (
-                    <li key={item} className="text-sm leading-relaxed text-foreground">
-                      {item}
+                    <li key={item.label} className="flex items-center gap-3 text-sm leading-relaxed text-foreground">
+                      <Icon name={item.icon} size={18} className="shrink-0 text-accent" />
+                      {item.label}
                     </li>
                   ))}
                 </ul>
@@ -114,33 +123,10 @@ export default function RudraValleyPage() {
           <ProjectSection id="gallery" title="Gallery">
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
               Renders from the masterplan visualization. Real site and show-unit photography to
-              be added as construction progresses.
+              be added as construction progresses. Scroll through the section below.
             </p>
-            <div className="flex flex-col gap-4">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-image">
-                <Image
-                  src={featuredGalleryImage.src}
-                  alt={featuredGalleryImage.alt}
-                  fill
-                  sizes="(min-width: 1024px) 800px, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {galleryFrames.map((frame) => (
-                  <div key={frame.src} className="relative aspect-[4/3] overflow-hidden rounded-image">
-                    <Image
-                      src={frame.src}
-                      alt={frame.alt}
-                      fill
-                      sizes="(min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
           </ProjectSection>
+          <ZoomParallax images={zoomGalleryImages} />
 
           <ProjectSection id="amenities" title="Amenities">
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">

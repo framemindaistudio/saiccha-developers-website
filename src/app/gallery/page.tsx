@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { PlayCircle } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { ProjectSection } from "@/components/project/project-section";
+import { ThreeDCarousel } from "@/components/motion/three-d-carousel";
 import { galleryCategories } from "@/lib/content-data";
 
 export const metadata: Metadata = {
@@ -12,8 +12,13 @@ export const metadata: Metadata = {
 };
 
 const photos = [
-  { src: "/images/hero-rudra-valley-aerial.jpg", alt: "Rudra Valley, aerial view" },
-  { src: "/images/rudra-valley-villas.jpg", alt: "Rudra Valley, villa exteriors" },
+  { src: "/images/rv-cinematic-aerial.jpg", alt: "Rudra Valley, cinematic aerial view" },
+  { src: "/images/rv-cinematic-entrance.jpg", alt: "Rudra Valley, guarded entrance boulevard" },
+  { src: "/images/rv-cinematic-clubhouse.jpg", alt: "Rudra Valley, clubhouse" },
+  { src: "/images/rv-cinematic-spa.jpg", alt: "Rudra Valley, spa and pool" },
+  { src: "/images/rv-cinematic-canal.jpg", alt: "Rudra Valley, recreational canal" },
+  { src: "/images/rv-cinematic-tennis.jpg", alt: "Rudra Valley, tennis lawn" },
+  { src: "/images/rv-cinematic-restaurant.jpg", alt: "Rudra Valley, restaurant" },
   { src: "/images/jagkalyan-eco-campus.jpg", alt: "JagKalyan Tarak Gurukul, eco campus" },
 ];
 
@@ -32,19 +37,7 @@ export default function GalleryPage() {
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{cat.body}</p>
 
             {cat.key === "photos" ? (
-              <div className="grid gap-4 sm:grid-cols-3">
-                {photos.map((photo) => (
-                  <div key={photo.src} className="relative aspect-square overflow-hidden rounded-image">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      fill
-                      sizes="(min-width: 640px) 33vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+              <ThreeDCarousel images={photos} />
             ) : (
               <div className="flex items-center gap-4 rounded-card border border-dashed border-border-strong p-6 text-sm text-muted-foreground">
                 <PlayCircle size={24} className="shrink-0 text-primary" weight="duotone" />

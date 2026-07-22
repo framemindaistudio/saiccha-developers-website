@@ -26,6 +26,10 @@ import {
   ForkKnife,
   Binoculars,
   Sailboat,
+  TreeEvergreen,
+  Sparkle,
+  Airplane,
+  Waves,
 } from "@phosphor-icons/react/ssr";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
@@ -57,6 +61,10 @@ export const iconMap: Record<string, PhosphorIcon> = {
   ForkKnife,
   Binoculars,
   Sailboat,
+  TreeEvergreen,
+  Sparkle,
+  Airplane,
+  Waves,
 };
 
 export function Icon({
