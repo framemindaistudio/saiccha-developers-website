@@ -143,7 +143,7 @@ export const testimonials = [
     quote:
       "We tracked our unit's construction month by month before we ever had to ask. That kind of visibility is rare.",
     name: "Prakash Naik",
-    role: "Homeowner, Rudra Valley",
+    role: "FarmOwner, Rudra Valley",
   },
   {
     quote:
@@ -155,7 +155,7 @@ export const testimonials = [
     quote:
       "Documentation was ready before we asked for it. Made the loan approval process considerably smoother.",
     name: "Rohan D'Souza",
-    role: "Homeowner, Rudra Valley",
+    role: "FarmOwner, Rudra Valley",
   },
 ];
 

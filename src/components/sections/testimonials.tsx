@@ -8,7 +8,7 @@ type TestimonialItem = { quote: string; name: string; role: string };
 
 export function Testimonials({
   items = defaultTestimonials,
-  title = "What homeowners and investors say",
+  title = "What farm owners and investors say",
   subtitle = "A few voices from people who've bought into a Saiccha community.",
 }: {
   items?: TestimonialItem[];
