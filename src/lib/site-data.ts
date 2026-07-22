@@ -105,7 +105,7 @@ export const ongoingProjects: Project[] = [
 export const sisterProject = {
   name: "JagKalyan Tarak Gurukul",
   tagline: "A holistic education, wellness, and eco-living campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission.",
-  href: "https://www.jagkalyan.org",
+  href: "https://jagkalyan-tarak-gurukul-website.vercel.app/",
 };
 
 export const highlights = [

@@ -70,7 +70,7 @@ export function FeaturedProjects() {
               </p>
             </div>
             <span className="flex shrink-0 items-center gap-1.5 text-sm font-medium text-primary">
-              Visit jagkalyan.org
+              Visit the website
               <ArrowSquareOut size={16} className="transition-transform group-hover:translate-x-0.5" />
             </span>
           </a>

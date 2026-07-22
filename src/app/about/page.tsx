@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Trophy } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -61,9 +62,15 @@ export default function AboutPage() {
           <div className="grid gap-10 sm:grid-cols-3">
             {leadership.map((person) => (
               <div key={person.name} className="flex flex-col gap-3">
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary text-base font-medium text-primary">
-                  {initials(person.name)}
-                </span>
+                {person.photo ? (
+                  <div className="relative h-14 w-14 overflow-hidden rounded-full">
+                    <Image src={person.photo} alt={person.name} fill className="object-cover" />
+                  </div>
+                ) : (
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary text-base font-medium text-primary">
+                    {initials(person.name)}
+                  </span>
+                )}
                 <div>
                   <h3 className="text-base font-medium tracking-tight">{person.name}</h3>
                   <p className="text-sm text-primary">{person.role}</p>

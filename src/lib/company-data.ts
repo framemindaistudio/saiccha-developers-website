@@ -19,9 +19,10 @@ export const coreValues = [
 
 export const leadership = [
   {
-    name: "Founder Name Pending",
+    name: "Dr. Tarak Arolkar",
     role: "Founder & Managing Director",
     bio: "Leads project strategy and land acquisition, with a focus on developments that hold their value over decades, not just at launch.",
+    photo: "/images/founder-tarak-arolkar.jpg",
   },
   {
     name: "Anjali Fernandes",
