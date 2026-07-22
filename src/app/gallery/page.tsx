@@ -19,7 +19,6 @@ const photos = [
   { src: "/images/rv-cinematic-canal.jpg", alt: "Rudra Valley, recreational canal" },
   { src: "/images/rv-cinematic-tennis.jpg", alt: "Rudra Valley, tennis lawn" },
   { src: "/images/rv-cinematic-restaurant.jpg", alt: "Rudra Valley, restaurant" },
-  { src: "/images/jagkalyan-eco-campus.jpg", alt: "JagKalyan Tarak Gurukul, eco campus" },
 ];
 
 export default function GalleryPage() {

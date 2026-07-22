@@ -4,13 +4,11 @@ import { ArrowRight } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { LegalNotice } from "@/components/ui/legal-notice";
-import { rudraValley, jagkalyanTarakGurukul } from "@/lib/projects-data";
+import { rudraValley } from "@/lib/projects-data";
 
 export const metadata: Metadata = {
   title: "RERA Details | Saiccha Developers",
 };
-
-const projects = [rudraValley, jagkalyanTarakGurukul];
 
 export default function ReraPage() {
   return (
@@ -28,22 +26,34 @@ export default function ReraPage() {
         </LegalNotice>
 
         <div className="flex flex-col divide-y divide-border border-t border-border">
-          {projects.map((project) => (
-            <div key={project.name} className="flex items-center justify-between gap-4 py-5 first:pt-0">
-              <div>
-                <p className="text-sm font-medium text-foreground">{project.name}</p>
-                <p className="text-xs text-muted-foreground">RERA number: pending</p>
-              </div>
-              <Link
-                href={`/projects/${project === rudraValley ? "rudra-valley" : "jagkalyan-tarak-gurukul"}`}
-                className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-hover"
-              >
-                View project
-                <ArrowRight size={14} />
-              </Link>
+          <div className="flex items-center justify-between gap-4 py-5 first:pt-0">
+            <div>
+              <p className="text-sm font-medium text-foreground">{rudraValley.name}</p>
+              <p className="text-xs text-muted-foreground">RERA number: pending</p>
             </div>
-          ))}
+            <Link
+              href="/projects/rudra-valley"
+              className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-hover"
+            >
+              View project
+              <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
+
+        <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
+          JagKalyan Tarak Gurukul is an independent initiative with its own registration and
+          legal documentation, published on its own site at{" "}
+          <a
+            href="https://www.jagkalyan.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary hover:text-primary-hover"
+          >
+            jagkalyan.org
+          </a>
+          .
+        </p>
       </Container>
     </>
   );

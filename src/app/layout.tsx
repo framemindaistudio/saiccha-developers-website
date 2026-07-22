@@ -21,7 +21,7 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "Saiccha Developers | Build Better. Live Better.",
   description:
-    "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities — from Rudra Valley to JagKalyan Tarak Gurukul.",
+    "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities, led by Rudra Valley.",
 };
 
 export default function RootLayout({

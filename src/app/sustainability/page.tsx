@@ -24,8 +24,8 @@ export default function SustainabilityPage() {
         <div className="relative mx-auto mt-14 aspect-[21/9] w-full max-w-[1400px] overflow-hidden rounded-image px-6 md:px-10">
           <div className="relative h-full w-full overflow-hidden rounded-image">
             <Image
-              src="/images/jagkalyan-eco-campus.jpg"
-              alt="Organic farms and eco-homes at the JagKalyan Tarak Gurukul campus"
+              src="/images/rv-cinematic-canal.jpg"
+              alt="The recreational canal and green landscaping at Rudra Valley"
               fill
               sizes="100vw"
               className="object-cover"

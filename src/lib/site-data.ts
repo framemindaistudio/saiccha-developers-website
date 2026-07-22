@@ -21,7 +21,6 @@ export const primaryNav: NavGroup[] = [
     href: "/projects",
     items: [
       { label: "Rudra Valley", href: "/projects/rudra-valley" },
-      { label: "JagKalyan Tarak Gurukul", href: "/projects/jagkalyan-tarak-gurukul" },
       { label: "Completed Projects", href: "/projects/completed" },
       { label: "Future Projects", href: "/projects/future" },
     ],
@@ -46,7 +45,6 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
     title: "Projects",
     links: [
       { label: "Rudra Valley", href: "/projects/rudra-valley" },
-      { label: "JagKalyan Tarak Gurukul", href: "/projects/jagkalyan-tarak-gurukul" },
       { label: "Completed Projects", href: "/projects/completed" },
       { label: "Future Projects", href: "/projects/future" },
     ],
@@ -99,16 +97,16 @@ export const ongoingProjects: Project[] = [
     href: "/projects/rudra-valley",
     imageSeed: "rudra-valley-hero",
   },
-  {
-    slug: "jagkalyan-tarak-gurukul",
-    name: "JagKalyan Tarak Gurukul",
-    tagline: "An eco-living campus of organic farms, wellness, and gurukul learning.",
-    location: "Goa",
-    status: "Now Registering Interest",
-    href: "/projects/jagkalyan-tarak-gurukul",
-    imageSeed: "jagkalyan-gurukul-hero",
-  },
 ];
+
+// JagKalyan Tarak Gurukul now has its own dedicated site (a sister
+// initiative co-founded with JagKalyan Holistic Mission), so it gets a
+// brief external mention here rather than a full page on this site.
+export const sisterProject = {
+  name: "JagKalyan Tarak Gurukul",
+  tagline: "A holistic education, wellness, and eco-living campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission.",
+  href: "https://www.jagkalyan.org",
+};
 
 export const highlights = [
   { value: "14+", label: "Years building in Goa" },

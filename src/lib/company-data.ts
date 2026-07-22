@@ -40,7 +40,7 @@ export const milestones = [
   { year: "2017", title: "First residential bungalow project completed and handed over" },
   { year: "2020", title: "First commercial complex delivered" },
   { year: "2023", title: "Rudra Valley masterplan approved" },
-  { year: "2026", title: "JagKalyan Tarak Gurukul masterplan approved, registrations open" },
+  { year: "2026", title: "Co-founded JagKalyan Holistic Mission, an independent education and wellness initiative" },
 ];
 
 export const awards = [

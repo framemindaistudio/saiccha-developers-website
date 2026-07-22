@@ -47,11 +47,6 @@ export const futureProjects = [
     description: "A planned commercial and office park adjacent to Rudra Valley.",
     status: "Masterplanning",
   },
-  {
-    name: "Phase II, JagKalyan Tarak Gurukul",
-    description: "Expansion of the eco-campus with additional eco-home clusters.",
-    status: "Under review",
-  },
 ];
 
 export const pressReleases = [
@@ -62,7 +57,6 @@ export const pressReleases = [
 
 export const mediaVideos = [
   { title: "Rudra Valley: aerial construction update, Q2 2026" },
-  { title: "JagKalyan Tarak Gurukul: masterplan walkthrough" },
   { title: "Meet the team behind Saiccha Developers" },
 ];
 
@@ -129,7 +123,6 @@ export const paymentPlan = [
 export const customerCareDocuments = [
   { title: "Sample sale agreement", type: "PDF" },
   { title: "Rudra Valley layout plan", type: "PDF" },
-  { title: "JagKalyan Tarak Gurukul masterplan", type: "PDF" },
   { title: "Payment schedule template", type: "PDF" },
 ];
 

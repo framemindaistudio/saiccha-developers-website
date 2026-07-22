@@ -37,8 +37,8 @@ export function ChatbotButton() {
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               We&rsquo;re building a knowledge-based assistant that can answer questions about
-              Rudra Valley, JagKalyan Tarak Gurukul, pricing, and documents directly from real
-              project data. Until then, reach the team directly on WhatsApp.
+              Rudra Valley, pricing, and documents directly from real project data. Until then,
+              reach the team directly on WhatsApp.
             </p>
             <a
               href="https://wa.me/918073087576"

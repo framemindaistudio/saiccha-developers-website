@@ -47,8 +47,8 @@ export default function CompletedProjectsPage() {
               label="Land Development"
             />
             <BeforeAfterSlider
-              beforeSrc="/images/jagkalyan-eco-campus.jpg"
-              afterSrc="/images/rudra-valley-villas.jpg"
+              beforeSrc="/images/rv-cinematic-entrance.jpg"
+              afterSrc="/images/rv-cinematic-clubhouse.jpg"
               label="Residential Bungalow"
             />
           </div>
