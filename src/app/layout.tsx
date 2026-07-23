@@ -3,7 +3,8 @@ import { Bodoni_Moda, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { ChatbotButton } from "@/components/layout/chatbot-button";
+import { Chatbot } from "@/components/layout/chatbot";
+import { chatbotConfig } from "@/lib/chatbot-data";
 import { FloatingDock } from "@/components/layout/floating-dock";
 
 const bodoniModa = Bodoni_Moda({
@@ -39,7 +40,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingDock />
-        <ChatbotButton />
+        <Chatbot config={chatbotConfig} />
       </body>
     </html>
   );
