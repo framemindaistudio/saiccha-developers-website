@@ -33,7 +33,7 @@ export const primaryNav: NavGroup[] = [
           { label: "Rudra Valley", href: "/projects/rudra-valley" },
           {
             label: "JagKalyan Tarak Gurukul",
-            href: "https://jagkalyan-tarak-gurukul-website.vercel.app/",
+            href: "https://www.jagkalyantarakgurukul.com/",
             external: true,
           },
         ],
@@ -126,7 +126,7 @@ export const ongoingProjects: Project[] = [
 export const sisterProject = {
   name: "JagKalyan Tarak Gurukul",
   tagline: "A holistic education, wellness, and eco-living campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission.",
-  href: "https://jagkalyan-tarak-gurukul-website.vercel.app/",
+  href: "https://www.jagkalyantarakgurukul.com/",
 };
 
 export const highlights = [
