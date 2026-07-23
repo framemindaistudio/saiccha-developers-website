@@ -87,7 +87,7 @@ export function FloatingDock() {
   ];
 
   return (
-    <div className="fixed bottom-5 left-1/2 z-40 hidden -translate-x-1/2 md:block">
+    <div className="fixed bottom-5 left-5 z-40 hidden md:block">
       <motion.div
         onMouseMove={(e) => mouseX.set(e.clientX)}
         onMouseLeave={() => mouseX.set(Infinity)}
