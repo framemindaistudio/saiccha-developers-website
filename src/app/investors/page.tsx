@@ -5,7 +5,6 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Button } from "@/components/ui/button";
 import { ProjectSection } from "@/components/project/project-section";
 import { StatRow } from "@/components/project/stat-row";
-import { QuickEnquiryForm } from "@/components/sections/quick-enquiry-form";
 import { whyInvest, roiPotential, legalDocuments } from "@/lib/company-data";
 
 export const metadata: Metadata = {
@@ -62,12 +61,6 @@ export default function InvestorsPage() {
               Start a Conversation
               <ArrowRight size={16} />
             </Button>
-          </div>
-        </ProjectSection>
-
-        <ProjectSection id="enquiry" title="Investor Enquiry">
-          <div className="max-w-xl">
-            <QuickEnquiryForm />
           </div>
         </ProjectSection>
       </Container>

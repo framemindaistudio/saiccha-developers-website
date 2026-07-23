@@ -1,8 +1,8 @@
-import { Phone, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/react/ssr";
+import { Phone, EnvelopeSimple, WhatsappLogo, ArrowRight } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
-import { QuickEnquiryForm } from "@/components/sections/quick-enquiry-form";
+import { Button } from "@/components/ui/button";
 
 export function QuickEnquiry() {
   return (
@@ -41,8 +41,19 @@ export function QuickEnquiry() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <QuickEnquiryForm />
+          <Reveal
+            delay={0.1}
+            className="flex flex-col items-start justify-center gap-5 rounded-card border border-border bg-surface-raised p-10"
+          >
+            <h3 className="font-display text-2xl tracking-tight">Ready to take the next step?</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Share a few details on our contact page and the project team will get back to you
+              within one business day.
+            </p>
+            <Button href="/contact">
+              Book a Site Visit
+              <ArrowRight size={16} />
+            </Button>
           </Reveal>
         </div>
       </Container>
