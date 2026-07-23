@@ -51,7 +51,7 @@ export function QuickEnquiry() {
               within one business day.
             </p>
             <Button href="/contact">
-              Book a Site Visit
+              Contact Us
               <ArrowRight size={16} />
             </Button>
           </Reveal>
