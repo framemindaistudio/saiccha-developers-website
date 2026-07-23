@@ -9,18 +9,43 @@ const projectOptions = [
   "Investor enquiry",
 ];
 
+// Submits directly to the Saiccha Developers Google Form (entry IDs read from
+// that form's own field markup) so responses land in its linked Sheet.
+const GOOGLE_FORM_ACTION =
+  "https://docs.google.com/forms/d/e/1FAIpQLSc07UjARGUkUiVLXgjmTaCOxJ6-945wz4ToOGLK7N1WnyZZYQ/formResponse";
+const ENTRY = {
+  name: "entry.183451796",
+  phone: "entry.250155298",
+  project: "entry.992069922",
+  message: "entry.47479220",
+};
+
 const inputClasses =
   "h-11 w-full rounded-input border border-border-strong bg-surface-raised px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/70 focus-visible:border-primary";
 
 export function QuickEnquiryForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "submitted">("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
-    // TODO: wire to a real API route (email + WhatsApp notification routing per
-    // design/project-plan.md Section 5) once the client confirms an inbox/CRM.
-    window.setTimeout(() => setStatus("submitted"), 500);
+
+    const form = new FormData(e.currentTarget);
+    const data = new FormData();
+    data.append(ENTRY.name, String(form.get("name") ?? ""));
+    data.append(ENTRY.phone, String(form.get("phone") ?? ""));
+    data.append(ENTRY.project, String(form.get("project") ?? ""));
+    data.append(ENTRY.message, String(form.get("message") ?? ""));
+
+    try {
+      // Google's formResponse endpoint doesn't send CORS headers, so the
+      // response is opaque; no-cors is the standard way to post to it
+      // from a browser without the request being blocked outright.
+      await fetch(GOOGLE_FORM_ACTION, { method: "POST", mode: "no-cors", body: data });
+    } catch (err) {
+      console.error("Enquiry form submission failed", err);
+    }
+    setStatus("submitted");
   }
 
   if (status === "submitted") {
