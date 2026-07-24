@@ -13,14 +13,14 @@ export function StatHighlightGrid({
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="flex flex-col gap-3 rounded-card border border-border bg-surface p-5"
+          className="flex flex-col gap-4 rounded-card border border-border bg-surface p-6"
         >
-          <Icon name={stat.icon} size={22} className="text-accent" />
+          <Icon name={stat.icon} size={32} className="text-accent" />
           <CountUp
             value={stat.value}
-            className="font-display text-2xl tracking-tight tabular-nums text-primary md:text-3xl"
+            className="font-display text-3xl tracking-tight tabular-nums text-primary md:text-4xl"
           />
-          <span className="text-xs leading-snug text-muted-foreground">{stat.label}</span>
+          <span className="text-sm leading-snug text-muted-foreground">{stat.label}</span>
         </div>
       ))}
     </div>

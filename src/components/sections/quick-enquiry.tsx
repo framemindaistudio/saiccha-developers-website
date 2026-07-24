@@ -4,6 +4,33 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 
+const contactMethods = [
+  {
+    href: "https://wa.me/918073087576",
+    external: true,
+    icon: WhatsappLogo,
+    iconClassName: "text-whatsapp",
+    label: "+91 80730 87576",
+    sublabel: "WhatsApp",
+  },
+  {
+    href: "tel:+918073087576",
+    external: false,
+    icon: Phone,
+    iconClassName: "text-primary",
+    label: "+91 80730 87576",
+    sublabel: "Call",
+  },
+  {
+    href: "mailto:info@saicchadevelopers.com",
+    external: false,
+    icon: EnvelopeSimple,
+    iconClassName: "text-primary",
+    label: "info@saicchadevelopers.com",
+    sublabel: "Email",
+  },
+];
+
 export function QuickEnquiry() {
   return (
     <section className="py-20 md:py-28 lg:py-32">
@@ -14,30 +41,26 @@ export function QuickEnquiry() {
               title="Let's talk about your next home"
               subtitle="Reach out for pricing, site visits, or investment details. Our team responds directly, not through a call centre."
             />
-            <div className="flex flex-col gap-4 text-sm">
-              <a
-                href="https://wa.me/918073087576"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-              >
-                <WhatsappLogo size={20} weight="fill" className="text-whatsapp" />
-                +91 80730 87576 (WhatsApp)
-              </a>
-              <a
-                href="tel:+918073087576"
-                className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-              >
-                <Phone size={20} className="text-primary" />
-                +91 80730 87576
-              </a>
-              <a
-                href="mailto:info@saicchadevelopers.com"
-                className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-              >
-                <EnvelopeSimple size={20} className="text-primary" />
-                info@saicchadevelopers.com
-              </a>
+            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 lg:gap-3">
+              {contactMethods.map((method) => (
+                <a
+                  key={method.sublabel}
+                  href={method.href}
+                  target={method.external ? "_blank" : undefined}
+                  rel={method.external ? "noopener noreferrer" : undefined}
+                  className="group flex items-center gap-4 rounded-card border border-border bg-surface-raised p-5 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+                >
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-secondary">
+                    <method.icon size={28} weight="fill" className={method.iconClassName} />
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      {method.sublabel}
+                    </span>
+                    <span className="text-base font-medium text-foreground">{method.label}</span>
+                  </div>
+                </a>
+              ))}
             </div>
           </Reveal>
 

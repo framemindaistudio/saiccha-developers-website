@@ -11,10 +11,10 @@ export const mission =
   "Deliver premium, sustainably-built communities on a published timeline, with construction progress, pricing, and legal documentation open to every buyer and investor from day one.";
 
 export const coreValues = [
-  { title: "Transparency", body: "Pricing, progress, and paperwork are published, not disclosed on request." },
-  { title: "Quality", body: "Materials and construction partners are chosen for the 20-year outcome, not the launch brochure." },
-  { title: "Sustainability", body: "Every masterplan reserves real green space and water infrastructure before a single unit is sold." },
-  { title: "Accountability", body: "Direct lines to project teams, from booking through handover and beyond." },
+  { icon: "ShieldCheck", title: "Transparency", body: "Pricing, progress, and paperwork are published, not disclosed on request." },
+  { icon: "Sparkle", title: "Quality", body: "Materials and construction partners are chosen for the 20-year outcome, not the launch brochure." },
+  { icon: "Leaf", title: "Sustainability", body: "Every masterplan reserves real green space and water infrastructure before a single unit is sold." },
+  { icon: "Handshake", title: "Accountability", body: "Direct lines to project teams, from booking through handover and beyond." },
 ];
 
 export const leadership = [
@@ -37,11 +37,11 @@ export const leadership = [
 ];
 
 export const milestones = [
-  { year: "2012", title: "Saiccha Developers founded, first land parcels acquired in Goa" },
-  { year: "2017", title: "First residential bungalow project completed and handed over" },
-  { year: "2020", title: "First commercial complex delivered" },
-  { year: "2023", title: "Rudra Valley masterplan approved" },
-  { year: "2026", title: "Co-founded JagKalyan Holistic Mission, an independent education and wellness initiative" },
+  { icon: "Mountains", year: "2012", title: "Saiccha Developers founded, first land parcels acquired in Goa" },
+  { icon: "House", year: "2017", title: "First residential bungalow project completed and handed over" },
+  { icon: "Buildings", year: "2020", title: "First commercial complex delivered" },
+  { icon: "ClipboardText", year: "2023", title: "Rudra Valley masterplan approved" },
+  { icon: "Handshake", year: "2026", title: "Co-founded JagKalyan Holistic Mission, an independent education and wellness initiative" },
 ];
 
 export const awards = [
@@ -88,21 +88,21 @@ export const services = [
 ];
 
 export const whyInvest = [
-  { title: "Published construction progress", body: "Every active project reports real progress, not launch-day renders." },
-  { title: "RERA-registered by default", body: "Legal documentation is prepared and published before a project takes bookings." },
-  { title: "Land-to-landmark delivery", body: "Land development, construction, and project management run in-house, reducing handoff risk." },
+  { icon: "ChartLineUp", title: "Published construction progress", body: "Every active project reports real progress, not launch-day renders." },
+  { icon: "ShieldCheck", title: "RERA-registered by default", body: "Legal documentation is prepared and published before a project takes bookings." },
+  { icon: "Buildings", title: "Land-to-landmark delivery", body: "Land development, construction, and project management run in-house, reducing handoff risk." },
 ];
 
 export const roiPotential = [
-  { value: "12+", label: "Years developing in Goa" },
-  { value: "3", label: "Active flagship developments" },
-  { value: "100%", label: "RERA-registered projects" },
+  { icon: "Mountains", value: "12+", label: "Years developing in Goa" },
+  { icon: "GridFour", value: "3", label: "Active flagship developments" },
+  { icon: "ShieldCheck", value: "100%", label: "RERA-registered projects" },
 ];
 
 export const legalDocuments = [
-  { title: "RERA registration certificates", body: "Per-project registration numbers and status, published on each project page." },
-  { title: "Title and land documentation", body: "Available on request during the investor enquiry process, before commitment." },
-  { title: "Sample sale agreement", body: "Shared ahead of booking so terms are reviewed, not discovered." },
+  { icon: "FileText", title: "RERA registration certificates", body: "Per-project registration numbers and status, published on each project page." },
+  { icon: "FileText", title: "Title and land documentation", body: "Available on request during the investor enquiry process, before commitment." },
+  { icon: "FileText", title: "Sample sale agreement", body: "Shared ahead of booking so terms are reviewed, not discovered." },
 ];
 
 export const sustainabilityPillars = [

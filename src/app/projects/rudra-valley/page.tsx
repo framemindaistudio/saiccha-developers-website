@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ProjectHero } from "@/components/project/project-hero";
 import { SectionNav } from "@/components/project/section-nav";
 import { ProjectSection } from "@/components/project/project-section";
-import { AmenitiesGrid } from "@/components/project/amenities-grid";
+import { IconRevealGrid } from "@/components/ui/icon-reveal-grid";
 import { PricingTable } from "@/components/project/pricing-table";
 import { ProgressTracker } from "@/components/project/progress-tracker";
 import { MapEmbed } from "@/components/project/map-embed";
@@ -101,31 +101,41 @@ export default function RudraValleyPage() {
             </p>
             <MapEmbed query="Amboli Ghat, Maharashtra, India" label={rudraValley.name} />
 
-            <div className="grid gap-8 sm:grid-cols-2">
-              <div className="flex flex-col gap-3">
-                <h3 className="text-sm font-medium text-muted-foreground">Connectivity</h3>
-                <div className="flex flex-col divide-y divide-border">
+            <div className="grid gap-10 sm:grid-cols-2">
+              <div className="flex flex-col gap-4">
+                <h3 className="text-sm font-medium uppercase tracking-wide text-primary">Connectivity</h3>
+                <div className="flex flex-col gap-3">
                   {rudraValley.nearby.connectivity.map((item) => (
-                    <div key={item.label} className="flex items-center gap-3 py-2.5">
-                      <Icon name={item.icon} size={18} className="shrink-0 text-accent" />
-                      <span className="flex-1 text-sm text-foreground">{item.label}</span>
-                      <span className="shrink-0 text-sm font-medium tabular-nums text-primary">
+                    <div
+                      key={item.label}
+                      className="flex items-center gap-4 rounded-card border border-border bg-surface-raised p-4"
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary">
+                        <Icon name={item.icon} size={24} className="text-accent" />
+                      </div>
+                      <span className="flex-1 text-base text-foreground">{item.label}</span>
+                      <span className="shrink-0 text-base font-medium tabular-nums text-primary">
                         {item.value}
                       </span>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col gap-3">
-                <h3 className="text-sm font-medium text-muted-foreground">Nearby Attractions</h3>
-                <ul className="flex flex-col gap-3">
+              <div className="flex flex-col gap-4">
+                <h3 className="text-sm font-medium uppercase tracking-wide text-primary">Nearby Attractions</h3>
+                <div className="flex flex-col gap-3">
                   {rudraValley.nearby.attractions.map((item) => (
-                    <li key={item.label} className="flex items-center gap-3 text-sm leading-relaxed text-foreground">
-                      <Icon name={item.icon} size={18} className="shrink-0 text-accent" />
-                      {item.label}
-                    </li>
+                    <div
+                      key={item.label}
+                      className="flex items-center gap-4 rounded-card border border-border bg-surface-raised p-4"
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary">
+                        <Icon name={item.icon} size={24} className="text-accent" />
+                      </div>
+                      <span className="flex-1 text-base leading-relaxed text-foreground">{item.label}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </ProjectSection>
@@ -143,7 +153,7 @@ export default function RudraValleyPage() {
               A dedicated amenity zone shared across the community, built around the clubhouse
               and canal.
             </p>
-            <AmenitiesGrid amenities={rudraValley.amenities} />
+            <IconRevealGrid items={rudraValley.amenities} />
           </ProjectSection>
 
           <ProjectSection id="layout-plan" title="Layout Plan">

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/motion/reveal";
-import { Icon } from "@/lib/icon-map";
+import { IconRevealGrid } from "@/components/ui/icon-reveal-grid";
 import { sustainabilityPillars } from "@/lib/company-data";
 
 export const metadata: Metadata = {
@@ -35,19 +35,7 @@ export default function SustainabilityPage() {
       </Reveal>
 
       <Container className="py-16 md:py-24">
-        <div className="grid gap-x-12 gap-y-12 md:grid-cols-2">
-          {sustainabilityPillars.map((pillar, i) => (
-            <Reveal key={pillar.title} delay={(i % 2) * 0.1}>
-              <div className="flex flex-col gap-4 border-t border-border pt-6">
-                <Icon name={pillar.icon} size={26} className="text-primary" />
-                <h2 className="text-lg font-medium tracking-tight">{pillar.title}</h2>
-                <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-                  {pillar.body}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <IconRevealGrid items={sustainabilityPillars} />
       </Container>
     </>
   );

@@ -6,6 +6,8 @@ import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { ProjectSection } from "@/components/project/project-section";
 import { Reveal } from "@/components/motion/reveal";
+import { IconRevealGrid } from "@/components/ui/icon-reveal-grid";
+import { Icon } from "@/lib/icon-map";
 import { ongoingProjects } from "@/lib/site-data";
 import { futureProjects } from "@/lib/content-data";
 
@@ -30,8 +32,14 @@ export default function ProjectsPage() {
 
       <Container className="max-w-4xl">
         <Reveal className="grid gap-6 pb-14 pt-20 sm:grid-cols-3 md:pt-24">
-          <a href="#ongoing" className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium uppercase tracking-wide text-primary">
+          <a
+            href="#ongoing"
+            className="group flex flex-col gap-3 rounded-card border border-border bg-surface-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+          >
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary">
+              <Icon name="Buildings" size={28} />
+            </div>
+            <span className="text-base font-medium uppercase tracking-wide text-primary">
               Ongoing
             </span>
             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -39,16 +47,28 @@ export default function ProjectsPage() {
               Gurukul.
             </p>
           </a>
-          <a href="#completed" className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium uppercase tracking-wide text-primary">
+          <a
+            href="#completed"
+            className="group flex flex-col gap-3 rounded-card border border-border bg-surface-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+          >
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary">
+              <Icon name="House" size={28} />
+            </div>
+            <span className="text-base font-medium uppercase tracking-wide text-primary">
               Completed
             </span>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Land, bungalows, and commercial complexes already delivered.
             </p>
           </a>
-          <a href="#future" className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium uppercase tracking-wide text-primary">
+          <a
+            href="#future"
+            className="group flex flex-col gap-3 rounded-card border border-border bg-surface-raised p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+          >
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary">
+              <Icon name="Path" size={28} />
+            </div>
+            <span className="text-base font-medium uppercase tracking-wide text-primary">
               Future
             </span>
             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -108,16 +128,17 @@ export default function ProjectsPage() {
         </ProjectSection>
 
         <ProjectSection id="future" title="Future Projects">
-          <div className="flex flex-col divide-y divide-border border-t border-border">
-            {futureProjects.map((project) => (
-              <div key={project.name} className="flex items-center justify-between gap-4 py-4 first:pt-0">
-                <span className="text-sm font-medium text-foreground">{project.name}</span>
-                <span className="shrink-0 rounded-full bg-secondary px-3 py-1 text-xs font-medium text-primary">
-                  {project.status}
-                </span>
-              </div>
-            ))}
-          </div>
+          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Tap a project to read where it stands today.
+          </p>
+          <IconRevealGrid
+            items={futureProjects.map((project) => ({
+              icon: project.icon,
+              title: project.name,
+              body: `${project.status}. ${project.description}`,
+            }))}
+            columns={2}
+          />
           <Link
             href="/projects/future"
             className="flex w-fit items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-hover"

@@ -38,11 +38,13 @@ export const completedTestimonials = [
 
 export const futureProjects = [
   {
+    icon: "Waves",
     name: "Saiccha Coastal Residences",
     description: "An early-stage coastal residential concept, land assessment underway.",
     status: "Concept stage",
   },
   {
+    icon: "Buildings",
     name: "Saiccha Business Park",
     description: "A planned commercial and office park adjacent to Rudra Valley.",
     status: "Masterplanning",

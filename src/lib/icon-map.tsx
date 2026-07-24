@@ -35,6 +35,7 @@ import {
   Storefront,
   Garage,
   DoorOpen,
+  FileText,
 } from "@phosphor-icons/react/ssr";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
@@ -75,6 +76,7 @@ export const iconMap: Record<string, PhosphorIcon> = {
   Storefront,
   Garage,
   DoorOpen,
+  FileText,
 };
 
 export function Icon({

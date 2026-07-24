@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ProjectHero } from "@/components/project/project-hero";
 import { SectionNav } from "@/components/project/section-nav";
 import { ProjectSection } from "@/components/project/project-section";
-import { AmenitiesGrid } from "@/components/project/amenities-grid";
+import { IconRevealGrid } from "@/components/ui/icon-reveal-grid";
 import { PricingTable } from "@/components/project/pricing-table";
 import { ProgressTracker } from "@/components/project/progress-tracker";
 import { MapEmbed } from "@/components/project/map-embed";
@@ -106,7 +106,7 @@ export default function JagKalyanTarakGurukulPage() {
               Eight dedicated amenities anchor the scheme, from the cricket stadium and sports
               centre to the decorative entrance gate.
             </p>
-            <AmenitiesGrid amenities={jagkalyanTarakGurukul.amenities} />
+            <IconRevealGrid items={jagkalyanTarakGurukul.amenities} />
           </ProjectSection>
 
           <ProjectSection id="layout-plan" title="Layout Plan">

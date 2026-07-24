@@ -126,10 +126,10 @@ export const ongoingProjects: Project[] = [
 ];
 
 export const highlights = [
-  { value: "14+", label: "Years building in Goa" },
-  { value: "12", label: "Lakh+ sq. ft. developed" },
-  { value: "3", label: "Active flagship developments" },
-  { value: "100%", label: "RERA-registered projects" },
+  { icon: "Buildings", value: "14+", label: "Years building in Goa" },
+  { icon: "Ruler", value: "12", label: "Lakh+ sq. ft. developed" },
+  { icon: "House", value: "3", label: "Active flagship developments" },
+  { icon: "ShieldCheck", value: "100%", label: "RERA-registered projects" },
 ];
 
 export const whyChooseUs = [

@@ -4,6 +4,8 @@ import { Trophy } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { ProjectSection } from "@/components/project/project-section";
+import { IconRevealGrid } from "@/components/ui/icon-reveal-grid";
+import { Icon } from "@/lib/icon-map";
 import { initials } from "@/lib/utils";
 import {
   ourStory,
@@ -48,14 +50,7 @@ export default function AboutPage() {
         </ProjectSection>
 
         <ProjectSection id="values" title="Core Values">
-          <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
-            {coreValues.map((value) => (
-              <div key={value.title} className="flex flex-col gap-2 border-t border-border pt-4">
-                <h3 className="text-base font-medium tracking-tight">{value.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{value.body}</p>
-              </div>
-            ))}
-          </div>
+          <IconRevealGrid items={coreValues} />
         </ProjectSection>
 
         <ProjectSection id="leadership" title="Leadership Team">
@@ -82,26 +77,37 @@ export default function AboutPage() {
         </ProjectSection>
 
         <ProjectSection id="milestones" title="Milestones">
-          <div className="flex flex-col divide-y divide-border">
+          <div className="flex flex-col gap-4">
             {milestones.map((m) => (
-              <div key={m.year} className="flex gap-6 py-4 first:pt-0">
-                <span className="w-16 shrink-0 font-display text-lg tracking-tight text-primary">
+              <div
+                key={m.year}
+                className="flex items-center gap-5 rounded-card border border-border bg-surface-raised p-5"
+              >
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
+                  <Icon name={m.icon} size={28} />
+                </div>
+                <span className="w-16 shrink-0 font-display text-xl tracking-tight text-primary">
                   {m.year}
                 </span>
-                <span className="text-sm leading-relaxed text-foreground">{m.title}</span>
+                <span className="text-base leading-relaxed text-foreground">{m.title}</span>
               </div>
             ))}
           </div>
         </ProjectSection>
 
         <ProjectSection id="awards" title="Awards & Recognition">
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-4">
             {awards.map((award) => (
-              <div key={award.title} className="flex items-start gap-4">
-                <Trophy size={22} className="mt-0.5 shrink-0 text-primary" weight="duotone" />
+              <div
+                key={award.title}
+                className="flex items-center gap-5 rounded-card border border-border bg-surface-raised p-5"
+              >
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-secondary">
+                  <Trophy size={28} className="text-primary" weight="duotone" />
+                </div>
                 <div>
-                  <p className="text-sm font-medium text-foreground">{award.title}</p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-base font-medium text-foreground">{award.title}</p>
+                  <p className="text-sm text-muted-foreground">
                     {award.issuer} &middot; {award.year}
                   </p>
                 </div>
