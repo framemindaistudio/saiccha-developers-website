@@ -19,18 +19,12 @@ export const rudraValley = {
   location: "Amboli Ghat, Maharashtra",
   status: "Bookings Open",
   overview:
-    "Rudra Valley is a premium farm-plot and farmhouse development in Amboli Ghat, a misty hill pass on the Goa-Maharashtra border known for its waterfalls, viewpoints, and forest. Phase 1 spans 233 acres; the wider Phase 2 vision extends to 467 acres and includes a dedicated 48-acre luxury resort. The development is laid out as a grid of individually numbered plots along a recreational canal, entered through a single guarded gatehouse and anchored by a shared clubhouse and amenity zone.",
+    "Rudra Valley is a premium farm-plot and farmhouse development in Amboli Ghat, a misty hill pass on the Goa-Maharashtra border known for its waterfalls, viewpoints, and forest. Phase 1 spans 233 acres, laid out as a grid of individually numbered plots along a recreational canal, entered through a single guarded gatehouse and anchored by a shared clubhouse and amenity zone.",
   masterPlan: {
-    body: "Phase 1 (233 acres) lays out numbered farm plots in ordered rows along a central spine road and a landscaped recreational canal, crossed by a pedestrian bridge, with sports fields, parking, and a viewing deck near the entrance. Phase 2 (467 acres) expands the vision with a 48-acre luxury resort, additional farmhouses, and a working tea plantation. Exact plot counts, sizes, and phase-by-phase acreage breakdowns are being finalized with the client.",
+    body: "Phase 1 spans 233 acres and lays out numbered farm plots in ordered rows along a central spine road and a landscaped recreational canal, crossed by a pedestrian bridge, with sports fields, parking, and a viewing deck near the entrance. Exact plot counts, sizes, and pricing are being finalized with the client.",
     stats: [
       { icon: "Mountains", value: "233 acres", label: "Phase 1, launching now" },
-      { icon: "TreeEvergreen", value: "467 acres", label: "Total Phase 2 vision" },
-      { icon: "Buildings", value: "48 acres", label: "Dedicated luxury resort" },
       { icon: "Sparkle", value: "15", label: "On-site amenities" },
-    ],
-    phases: [
-      { label: "Phase 1", acres: 233 },
-      { label: "Phase 2", acres: 467 },
     ],
   },
   nearby: {
@@ -69,7 +63,7 @@ export const rudraValley = {
     { icon: "Sailboat", title: "River Rafting", body: "White-water rafting on the nearby river, organized for residents." },
   ],
   layoutPlan: {
-    body: "Individually numbered farm plots are laid out in ordered rows across the Phase 1 masterplan grid, the majority with direct canal or road frontage; farmhouses and resort-adjacent plots follow in Phase 2. Detailed layout plans and plot-by-plot dimensions are being finalized with the client and will be added here, alongside downloadable floor plans once available.",
+    body: "Individually numbered farm plots are laid out in ordered rows across the Phase 1 masterplan grid, the majority with direct canal or road frontage. Detailed layout plans and plot-by-plot dimensions are being finalized with the client and will be added here, alongside downloadable floor plans once available.",
   },
   pricing: [],
   constructionProgress: {

@@ -11,7 +11,6 @@ import { PricingTable } from "@/components/project/pricing-table";
 import { ProgressTracker } from "@/components/project/progress-tracker";
 import { MapEmbed } from "@/components/project/map-embed";
 import { StatHighlightGrid } from "@/components/project/stat-highlight-grid";
-import { PhaseBar } from "@/components/project/phase-bar";
 import { ZoomParallax } from "@/components/motion/zoom-parallax";
 import { Icon } from "@/lib/icon-map";
 import { rudraValley } from "@/lib/projects-data";
@@ -67,11 +66,13 @@ export default function RudraValleyPage() {
               {rudraValley.masterPlan.body}
             </p>
             <StatHighlightGrid stats={rudraValley.masterPlan.stats} />
-            <div className="flex flex-col gap-2 rounded-card border border-border bg-surface p-5">
-              <span className="text-xs font-medium text-muted-foreground">
-                Total vision, by phase
+            <div className="flex flex-wrap items-center gap-4 rounded-card border border-primary/20 bg-primary/5 p-6">
+              <span className="rounded-full bg-primary px-5 py-2 text-sm font-semibold uppercase tracking-wide text-on-primary">
+                Phase 1
               </span>
-              <PhaseBar phases={rudraValley.masterPlan.phases} />
+              <span className="font-display text-lg tracking-tight text-foreground">
+                233 acres, launching now, bookings open
+              </span>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-image">
               <Image
@@ -80,6 +81,15 @@ export default function RudraValleyPage() {
                 fill
                 sizes="(min-width: 1024px) 800px, 100vw"
                 className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-image border border-border">
+              <Image
+                src="/images/rudra-valley-layout-3d.jpg"
+                alt="3D layout render of the Rudra Valley Phase 1 master plan"
+                fill
+                sizes="(min-width: 1024px) 900px, 100vw"
+                className="object-contain bg-surface-raised"
               />
             </div>
           </ProjectSection>

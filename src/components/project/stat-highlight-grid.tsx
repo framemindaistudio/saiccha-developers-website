@@ -6,8 +6,10 @@ export function StatHighlightGrid({
 }: {
   stats: { icon: string; value: string; label: string }[];
 }) {
+  const smCols =
+    stats.length >= 4 ? "sm:grid-cols-4" : stats.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2";
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+    <div className={`grid grid-cols-2 gap-4 ${smCols}`}>
       {stats.map((stat) => (
         <div
           key={stat.label}
