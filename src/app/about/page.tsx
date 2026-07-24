@@ -53,24 +53,29 @@ export default function AboutPage() {
           <IconRevealGrid items={coreValues} />
         </ProjectSection>
 
-        <ProjectSection id="leadership" title="Leadership Team">
-          <div className="grid gap-10 sm:grid-cols-3">
+        <ProjectSection id="leadership" title="Leadership">
+          <div className="flex flex-col gap-8">
             {leadership.map((person) => (
-              <div key={person.name} className="flex flex-col gap-3">
+              <div
+                key={person.name}
+                className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6"
+              >
                 {person.photo ? (
-                  <div className="relative h-14 w-14 overflow-hidden rounded-full">
+                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full sm:h-24 sm:w-24">
                     <Image src={person.photo} alt={person.name} fill className="object-cover" />
                   </div>
                 ) : (
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary text-base font-medium text-primary">
+                  <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-secondary text-lg font-medium text-primary sm:h-24 sm:w-24">
                     {initials(person.name)}
                   </span>
                 )}
-                <div>
-                  <h3 className="text-base font-medium tracking-tight">{person.name}</h3>
-                  <p className="text-sm text-primary">{person.role}</p>
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <h3 className="text-lg font-medium tracking-tight">{person.name}</h3>
+                    <p className="text-sm text-primary">{person.role}</p>
+                  </div>
+                  <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">{person.bio}</p>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">{person.bio}</p>
               </div>
             ))}
           </div>

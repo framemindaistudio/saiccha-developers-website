@@ -24,16 +24,6 @@ export const leadership = [
     bio: "Leads project strategy and land acquisition, with a focus on developments that hold their value over decades, not just at launch.",
     photo: "/images/founder-tarak-arolkar.jpg",
   },
-  {
-    name: "Anjali Fernandes",
-    role: "Head of Projects",
-    bio: "Oversees construction delivery and contractor partnerships across all active sites.",
-  },
-  {
-    name: "Vikram Shet",
-    role: "Head of Sales & Investor Relations",
-    bio: "Point of contact for buyers and investors from first enquiry through documentation.",
-  },
 ];
 
 export const milestones = [
