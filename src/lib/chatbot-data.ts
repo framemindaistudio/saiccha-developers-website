@@ -40,10 +40,9 @@ export const chatbotConfig: ChatbotConfig = {
       id: "jagkalyan",
       label: "JagKalyan Tarak Gurukul",
       reply:
-        "A holistic education, wellness, and eco-living campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission. It now has its own dedicated website.",
-      href: "https://www.jagkalyantarakgurukul.com/",
-      hrefLabel: "Visit the website",
-      external: true,
+        "Eco Living is a gated, plotted scheme beside the JagKalyan Tarak Gurukul campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission. Phase 1 has released 1,000 of 3,000 planned plots.",
+      href: "/projects/jagkalyan-tarak-gurukul",
+      hrefLabel: "See the project",
     },
     {
       id: "services",

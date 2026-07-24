@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, ArrowRight, ArrowSquareOut } from "@phosphor-icons/react/ssr";
+import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { ProjectSection } from "@/components/project/project-section";
 import { Reveal } from "@/components/motion/reveal";
-import { ongoingProjects, sisterProject } from "@/lib/site-data";
+import { ongoingProjects } from "@/lib/site-data";
 import { futureProjects } from "@/lib/content-data";
 
 export const metadata: Metadata = {
@@ -16,11 +16,10 @@ export const metadata: Metadata = {
 
 const projectImages: Record<string, string> = {
   "rudra-valley": "/images/rv-cinematic-aerial.jpg",
+  "jagkalyan-tarak-gurukul": "/images/jk-amenity-water-body.jpg",
 };
 
 export default function ProjectsPage() {
-  const project = ongoingProjects[0];
-
   return (
     <>
       <PageHero
@@ -36,7 +35,8 @@ export default function ProjectsPage() {
               Ongoing
             </span>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Rudra Valley&rsquo;s farm plots, and JagKalyan Tarak Gurukul on its own site.
+              Rudra Valley&rsquo;s farm plots, and the Eco Living scheme beside JagKalyan Tarak
+              Gurukul.
             </p>
           </a>
           <a href="#completed" className="flex flex-col gap-1.5">
@@ -58,53 +58,39 @@ export default function ProjectsPage() {
         </Reveal>
 
         <ProjectSection id="ongoing" title="Ongoing Projects">
-          <Reveal>
-            <Link href={project.href} className="group grid gap-6 sm:grid-cols-2 sm:items-center sm:gap-8">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-image">
-                <Image
-                  src={projectImages[project.slug]}
-                  alt={`${project.name}, ${project.tagline}`}
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                />
-                <span className="absolute left-4 top-4 rounded-full bg-surface-raised/90 px-3 py-1.5 text-xs font-medium text-foreground backdrop-blur-sm">
-                  {project.status}
-                </span>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <h3 className="font-display text-xl tracking-tight">{project.name}</h3>
-                <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  {project.tagline}
-                </p>
-                <span className="mt-1 flex items-center gap-1.5 text-sm font-medium text-primary">
-                  View project
-                  <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-                </span>
-              </div>
-            </Link>
-          </Reveal>
-
-          <a
-            href={sisterProject.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-8 flex flex-col gap-3 rounded-card border border-border bg-surface p-6 sm:flex-row sm:items-center sm:justify-between"
-          >
-            <div className="flex flex-col gap-1">
-              <span className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
-                From our founding family
-              </span>
-              <h4 className="font-display text-lg tracking-tight">{sisterProject.name}</h4>
-              <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-                {sisterProject.tagline}
-              </p>
-            </div>
-            <span className="flex shrink-0 items-center gap-1.5 text-sm font-medium text-primary">
-              Visit the website
-              <ArrowSquareOut size={16} className="transition-transform group-hover:translate-x-0.5" />
-            </span>
-          </a>
+          <div className="flex flex-col gap-10">
+            {ongoingProjects.map((project) => (
+              <Reveal key={project.slug}>
+                <Link
+                  href={project.href}
+                  className="group grid gap-6 sm:grid-cols-2 sm:items-center sm:gap-8"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-image">
+                    <Image
+                      src={projectImages[project.slug]}
+                      alt={`${project.name}, ${project.tagline}`}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-4 top-4 rounded-full bg-surface-raised/90 px-3 py-1.5 text-xs font-medium text-foreground backdrop-blur-sm">
+                      {project.status}
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <h3 className="font-display text-xl tracking-tight">{project.name}</h3>
+                    <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+                      {project.tagline}
+                    </p>
+                    <span className="mt-1 flex items-center gap-1.5 text-sm font-medium text-primary">
+                      View project
+                      <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </ProjectSection>
 
         <ProjectSection id="completed" title="Completed Projects">

@@ -3,7 +3,13 @@
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "motion/react";
 
-export function PhaseBar({ phases }: { phases: { label: string; acres: number }[] }) {
+export function PhaseBar({
+  phases,
+  unit = "acres",
+}: {
+  phases: { label: string; acres: number }[];
+  unit?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.6 });
   const reduce = useReducedMotion();
@@ -31,7 +37,9 @@ export function PhaseBar({ phases }: { phases: { label: string; acres: number }[
           <div key={phase.label} className="flex items-center gap-2 text-sm">
             <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${tones[i % tones.length]}`} />
             <span className="text-foreground">{phase.label}</span>
-            <span className="tabular-nums text-muted-foreground">{phase.acres} acres</span>
+            <span className="tabular-nums text-muted-foreground">
+              {phase.acres.toLocaleString("en-IN")} {unit}
+            </span>
           </div>
         ))}
       </div>

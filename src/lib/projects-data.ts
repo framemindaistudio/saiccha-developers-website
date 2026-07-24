@@ -79,3 +79,59 @@ export const rudraValley = {
   },
   brochureUrl: "#",
 };
+
+// JagKalyan Tarak Gurukul content below covers the Eco Living plotted scheme
+// specifically, the real-estate half of the wider JagKalyan Tarak Gurukul
+// initiative (a joint venture with JagKalyan Holistic Mission). Source:
+// client-supplied concept layout, "Khanyale property REVISED
+// 20.07.2026-Model.pdf", and the same data structured on the dedicated
+// JagKalyan Tarak Gurukul website's Eco Living page. The campus itself
+// (education, wellness, research) lives entirely on that dedicated site,
+// linked at the end of this page.
+export const jagkalyanTarakGurukul = {
+  name: "JagKalyan Tarak Gurukul",
+  tagline: "A gated, plotted eco-living scheme beside the Gurukul campus, in Dodamarg, North Goa.",
+  heroImage: "/images/jk-grand-entrance.jpg",
+  cardImage: "/images/jk-amenity-water-body.jpg",
+  location: "Village Khanyale, Dodamarg Taluka, Sindhudurg District, Maharashtra",
+  status: "Phase 1 Underway",
+  overview:
+    "JagKalyan Tarak Gurukul is a joint initiative with JagKalyan Holistic Mission: an integrated campus for holistic education, wellness, and research, paired with Eco Living, a gated, plotted residential scheme immediately beside it. Eco Living is laid out across two plot formats along a network of wide internal roads, anchored by a cricket stadium, sports and shopping centres, a landscaped water body, and a monumental entrance gate, all directly adjoining the Gurukul campus itself.",
+  masterPlan: {
+    body: "Phase 1 releases 1,000 plots now, out of 3,000 planned across the full scheme, laid out along 15.0 m and 12.0 m internal roads in two plot formats. The amenity cluster sits at the southern end of the site, adjoining the Gurukul campus, with the decorative entrance gate and two of the scheme's four watch towers at the northern entrance.",
+    stats: [
+      { icon: "Ruler", value: "1,000", label: "Phase 1 plots" },
+      { icon: "GridFour", value: "3,000", label: "Total planned plots" },
+      { icon: "Path", value: "2", label: "Plot formats (500 & 150 sq.m)" },
+      { icon: "Sparkle", value: "8", label: "On-site amenities" },
+    ],
+    phases: [
+      { label: "Phase 1", acres: 1000 },
+      { label: "Remaining phases", acres: 2000 },
+    ],
+  },
+  nearby: {
+    body: "Eco Living sits in Village Khanyale, Dodamarg Taluka, Sindhudurg District, directly beside the JagKalyan Tarak Gurukul campus.",
+  },
+  amenities: [
+    { icon: "SoccerBall", title: "Cricket Stadium", body: "A dedicated cricket stadium across 5 acres." },
+    { icon: "Basketball", title: "Sports Centre", body: "A shared sports centre for residents." },
+    { icon: "Storefront", title: "Shopping Centre", body: "Everyday retail within the scheme itself." },
+    { icon: "Garage", title: "Amenities & Parking", body: "A dedicated amenities and parking zone across 5.5 acres." },
+    { icon: "Waves", title: "Water Body", body: "A landscaped water body at the heart of the scheme." },
+    { icon: "DoorOpen", title: "Decorative Entrance Gate", body: "A monumental gated entrance to the scheme." },
+    { icon: "Binoculars", title: "Watch Towers", body: "Four watch towers positioned around the scheme's perimeter for security." },
+    { icon: "Buildings", title: "JTG Complex", body: "Directly adjoining the JagKalyan Tarak Gurukul campus itself." },
+  ],
+  layoutPlan: {
+    body: "Two plot formats run along the scheme's internal road network: a 500 sq.m format along the main roads, and a more compact 150 sq.m format for buyers seeking a smaller footprint. Roads are laid out at 15.0 m and 12.0 m widths. Detailed plot-by-plot dimensions and numbering are being finalized with the client and will be added here.",
+  },
+  pricing: [],
+  constructionProgress: {
+    percent: 33,
+    phase: "Phase 1 underway.",
+    updated: "July 2026",
+  },
+  brochureUrl: "#",
+  websiteUrl: "https://www.jagkalyantarakgurukul.com/",
+};

@@ -30,6 +30,11 @@ import {
   Sparkle,
   Airplane,
   Waves,
+  Ruler,
+  Basketball,
+  Storefront,
+  Garage,
+  DoorOpen,
 } from "@phosphor-icons/react/ssr";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
@@ -65,6 +70,11 @@ export const iconMap: Record<string, PhosphorIcon> = {
   Sparkle,
   Airplane,
   Waves,
+  Ruler,
+  Basketball,
+  Storefront,
+  Garage,
+  DoorOpen,
 };
 
 export function Icon({
