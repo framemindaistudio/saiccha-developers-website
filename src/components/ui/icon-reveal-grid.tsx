@@ -79,13 +79,23 @@ export function IconRevealGrid({
             key={item.title}
             type="button"
             onClick={() => open(item.title)}
-            className="group flex cursor-pointer flex-col items-start gap-4 rounded-card border border-border bg-surface-raised p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+            className="group relative flex cursor-pointer flex-col items-start gap-4 overflow-hidden rounded-card border border-border bg-surface-raised p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
             aria-haspopup="dialog"
           >
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary text-primary transition-transform duration-200 group-hover:scale-105">
+            {item.image ? (
+              <Image
+                src={item.image}
+                alt=""
+                fill
+                aria-hidden="true"
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover opacity-30 transition-opacity duration-200 group-hover:opacity-40"
+              />
+            ) : null}
+            <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary text-primary transition-transform duration-200 group-hover:scale-105">
               <Icon name={item.icon} size={32} />
             </div>
-            <h3 className="font-display text-xl tracking-tight">{item.title}</h3>
+            <h3 className="relative z-10 font-display text-xl tracking-tight">{item.title}</h3>
           </button>
         ))}
       </div>
