@@ -41,7 +41,7 @@ export function CountUp({ value, className }: { value: string; className?: strin
     });
 
     return () => controls.stop();
-  }, [inView, numeric, suffix, reduce, value]);
+  }, [inView, numeric, suffix, reduce, value, hasCommas]);
 
   return (
     <span ref={ref} className={className}>

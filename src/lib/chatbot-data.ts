@@ -19,7 +19,6 @@ export type ChatbotConfig = {
   topicsIntro: string;
   topics: ChatTopic[];
   faqs: ChatFaq[];
-  enquireHref: string;
   whatsappHref: string;
 };
 
@@ -99,6 +98,5 @@ export const chatbotConfig: ChatbotConfig = {
       answer: "Call or WhatsApp +91 80730 87576, or email info@saicchadevelopers.com.",
     },
   ],
-  enquireHref: "https://docs.google.com/forms/d/e/1FAIpQLSc07UjARGUkUiVLXgjmTaCOxJ6-945wz4ToOGLK7N1WnyZZYQ/viewform",
   whatsappHref: "https://wa.me/918073087576",
 };

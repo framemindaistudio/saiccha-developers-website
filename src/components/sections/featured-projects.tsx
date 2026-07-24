@@ -8,7 +8,7 @@ import { ongoingProjects } from "@/lib/site-data";
 
 const projectImages: Record<string, string> = {
   "rudra-valley": "/images/rv-cinematic-aerial.jpg",
-  "jagkalyan-tarak-gurukul": "/images/jk-amenity-water-body.jpg",
+  "jagkalyan-tarak-gurukul": "/images/eco-living-layout-3d.jpg",
 };
 
 export function FeaturedProjects() {

@@ -72,12 +72,12 @@ export default function JagKalyanTarakGurukulPage() {
               </span>
               <PhaseBar phases={jagkalyanTarakGurukul.masterPlan.phases} unit="plots" />
             </div>
-            <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-image border border-border sm:mx-auto">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-image border border-border">
               <Image
-                src="/images/eco-living-concept-layout.jpg"
-                alt="Eco Living concept layout at JagKalyan Tarak Gurukul, Village Khanyale"
+                src="/images/eco-living-layout-3d.jpg"
+                alt="3D layout render of the Eco Living scheme at JagKalyan Tarak Gurukul, Village Khanyale"
                 fill
-                sizes="(min-width: 640px) 448px, 100vw"
+                sizes="(min-width: 1024px) 900px, 100vw"
                 className="object-contain bg-surface-raised"
               />
             </div>

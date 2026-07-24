@@ -147,14 +147,6 @@ export function Chatbot({ config }: { config: ChatbotConfig }) {
 
             <div className="flex gap-2 border-t border-border p-4">
               <a
-                href={config.enquireHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-button bg-accent px-3 py-2 text-xs font-medium text-on-accent transition-colors hover:bg-accent-hover"
-              >
-                Enquire Now
-              </a>
-              <a
                 href={config.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
