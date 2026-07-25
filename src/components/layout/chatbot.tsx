@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { X, ArrowLeft, ArrowSquareOut } from "@phosphor-icons/react/ssr";
 import { EyeTracking } from "@/components/motion/eye-tracking";
 import type { ChatbotConfig, ChatTopic, ChatFaq } from "@/lib/chatbot-data";
@@ -15,6 +15,7 @@ type View =
 export function Chatbot({ config }: { config: ChatbotConfig }) {
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>({ kind: "menu" });
+  const reduce = useReducedMotion();
 
   function toggle() {
     setOpen((v) => {
@@ -148,15 +149,26 @@ export function Chatbot({ config }: { config: ChatbotConfig }) {
         ) : null}
       </AnimatePresence>
 
-      <button
-        type="button"
-        onClick={toggle}
-        aria-label={open ? "Close assistant" : "Open assistant"}
-        aria-expanded={open}
-        className="fixed bottom-5 right-5 z-50 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-primary shadow-lg shadow-foreground/25 transition-transform hover:scale-105 active:scale-95 sm:right-6"
-      >
-        <EyeTracking eyeSize={16} gap={9} />
-      </button>
+      <div className="fixed bottom-5 right-5 z-50 sm:right-6">
+        {!reduce && !open ? (
+          <motion.span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-full bg-accent/50"
+            animate={{ scale: [1, 1.45, 1], opacity: [0.6, 0, 0.6] }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+          />
+        ) : null}
+        <button
+          type="button"
+          onClick={toggle}
+          aria-label={open ? "Close assistant" : "Open assistant"}
+          aria-expanded={open}
+          className="relative flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-hover shadow-xl shadow-primary/40 transition-transform hover:scale-105 active:scale-95"
+        >
+          <EyeTracking eyeSize={16} gap={9} />
+          <span className="absolute -top-0.5 -right-0.5 h-3.5 w-3.5 rounded-full border-2 border-surface bg-accent" />
+        </button>
+      </div>
     </>
   );
 }
