@@ -48,7 +48,6 @@ export default function RudraValleyPage() {
         location={rudraValley.location}
         status={rudraValley.status}
         image={rudraValley.heroImage}
-        brochureUrl={rudraValley.brochureUrl}
       />
 
       <Container className="grid gap-12 pb-16 lg:grid-cols-[200px_1fr] lg:gap-16 lg:pb-24">

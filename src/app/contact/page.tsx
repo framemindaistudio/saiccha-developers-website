@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, EnvelopeSimple, WhatsappLogo, MapPin } from "@phosphor-icons/react/ssr";
+import { EnvelopeSimple, MapPin } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/motion/reveal";
@@ -8,7 +8,7 @@ import { QuickEnquiryForm } from "@/components/sections/quick-enquiry-form";
 
 export const metadata: Metadata = {
   title: "Contact Us | Saiccha Developers",
-  description: "Office locations, phone, email, WhatsApp, and enquiry form for Saiccha Developers.",
+  description: "Office locations, email, and enquiry form for Saiccha Developers.",
 };
 
 const offices = [
@@ -28,22 +28,6 @@ export default function ContactPage() {
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal className="flex flex-col gap-10">
             <div className="flex flex-col gap-4 text-sm">
-              <a
-                href="https://wa.me/918073087576"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-              >
-                <WhatsappLogo size={20} weight="fill" className="text-whatsapp" />
-                +91 80730 87576 (WhatsApp)
-              </a>
-              <a
-                href="tel:+918073087576"
-                className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-              >
-                <Phone size={20} className="text-primary" />
-                +91 80730 87576
-              </a>
               <a
                 href="mailto:info@saicchadevelopers.com"
                 className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"

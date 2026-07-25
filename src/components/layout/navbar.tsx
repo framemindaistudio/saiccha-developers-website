@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { List, X, CaretDown, WhatsappLogo } from "@phosphor-icons/react/ssr";
+import { List, X, CaretDown, ArrowSquareOut } from "@phosphor-icons/react/ssr";
 import { primaryNav } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -28,6 +28,9 @@ export function Navbar() {
             priority
             className="h-14 w-auto"
           />
+          <span className="font-display text-base font-medium tracking-tight text-foreground sm:text-lg">
+            Saiccha Developers
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -96,13 +99,13 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="https://wa.me/918073087576"
+            href="https://saiccha.live"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Chat with Saiccha Developers on WhatsApp"
-            className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-whatsapp text-on-whatsapp transition-colors hover:bg-whatsapp-hover"
+            className="flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:border-primary hover:text-primary"
           >
-            <WhatsappLogo size={22} weight="fill" />
+            Saiccha Live
+            <ArrowSquareOut size={15} />
           </a>
           <Button href="/contact">Book a Site Visit</Button>
         </div>
@@ -170,7 +173,17 @@ export function Navbar() {
                 ) : null}
               </div>
             ))}
-            <Button href="/contact" className="mt-4 w-full">
+            <a
+              href="https://saiccha.live"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="mt-3 flex items-center gap-1.5 py-2 text-base font-medium text-foreground"
+            >
+              Saiccha Live
+              <ArrowSquareOut size={16} />
+            </a>
+            <Button href="/contact" className="mt-1 w-full">
               Book a Site Visit
             </Button>
           </Container>

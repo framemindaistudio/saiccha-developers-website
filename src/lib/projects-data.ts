@@ -84,13 +84,13 @@ export const rudraValley = {
 // linked at the end of this page.
 export const jagkalyanTarakGurukul = {
   name: "JagKalyan Tarak Gurukul",
-  tagline: "A gated, plotted eco-living scheme beside the Gurukul campus, in Dodamarg, North Goa.",
+  tagline: "A gated, plotted Gurukul Eco World scheme beside the Gurukul campus, in Dodamarg, North Goa.",
   heroImage: "/images/jk-grand-entrance.jpg",
   cardImage: "/images/jk-amenity-water-body.jpg",
   location: "Village Khanyale, Dodamarg Taluka, Sindhudurg District, Maharashtra",
   status: "Phase 1 Underway",
   overview:
-    "JagKalyan Tarak Gurukul is a joint initiative with JagKalyan Holistic Mission: an integrated campus for holistic education, wellness, and research, paired with Eco Living, a gated, plotted residential scheme immediately beside it. Eco Living is laid out across two plot formats along a network of wide internal roads, anchored by a cricket stadium, sports and shopping centres, a landscaped water body, and a monumental entrance gate, all directly adjoining the Gurukul campus itself.",
+    "JagKalyan Tarak Gurukul is a joint initiative with JagKalyan Holistic Mission: an integrated campus for holistic education, wellness, and research, paired with Gurukul Eco World, a gated, plotted residential scheme immediately beside it. Gurukul Eco World is laid out across two plot formats along a network of wide internal roads, anchored by a cricket stadium, sports and shopping centres, a landscaped water body, and a monumental entrance gate, all directly adjoining the Gurukul campus itself.",
   masterPlan: {
     body: "Phase 1 releases 1,000 plots now, out of 3,000 planned across the full scheme, laid out along 15.0 m and 12.0 m internal roads in two plot formats. The amenity cluster sits at the southern end of the site, adjoining the Gurukul campus, with the decorative entrance gate and two of the scheme's four watch towers at the northern entrance.",
     stats: [
@@ -105,7 +105,7 @@ export const jagkalyanTarakGurukul = {
     ],
   },
   nearby: {
-    body: "Eco Living sits in Village Khanyale, Dodamarg Taluka, Sindhudurg District, directly beside the JagKalyan Tarak Gurukul campus.",
+    body: "Gurukul Eco World sits in Village Khanyale, Dodamarg Taluka, Sindhudurg District, directly beside the JagKalyan Tarak Gurukul campus.",
   },
   amenities: [
     { icon: "SoccerBall", title: "Cricket Stadium", body: "A dedicated cricket stadium across 5 acres.", image: "/images/jk-amenity-cricket-stadium.jpg" },

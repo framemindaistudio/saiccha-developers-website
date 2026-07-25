@@ -40,13 +40,6 @@
 
   --color-ring: #c9982e;
 
-  /* WhatsApp's own brand green — third-party marks stay in their official
-     color rather than tinted to the site palette, same convention as a
-     "Sign in with Google" button. Used only for the WhatsApp glyph/badge. */
-  --color-whatsapp: #25d366;
-  --color-whatsapp-hover: #1ebe57;
-  --color-on-whatsapp: #ffffff;
-
   /* Shape consistency lock: pills for buttons, soft radius for cards/images/inputs */
   --radius-button: 999px;
   --radius-card: 20px;
@@ -82,10 +75,6 @@
   --color-success: var(--color-success);
 
   --color-ring: var(--color-ring);
-
-  --color-whatsapp: var(--color-whatsapp);
-  --color-whatsapp-hover: var(--color-whatsapp-hover);
-  --color-on-whatsapp: var(--color-on-whatsapp);
 
   --radius-button: var(--radius-button);
   --radius-card: var(--radius-card);

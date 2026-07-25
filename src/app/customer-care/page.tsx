@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DownloadSimple, ArrowRight, Phone, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/react/ssr";
+import { DownloadSimple, ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { ProjectSection } from "@/components/project/project-section";
@@ -83,22 +83,6 @@ export default function CustomerCarePage() {
 
         <ProjectSection id="support" title="Support">
           <div className="flex flex-col gap-4 text-sm">
-            <a
-              href="https://wa.me/918073087576"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-            >
-              <WhatsappLogo size={20} weight="fill" className="text-whatsapp" />
-              +91 80730 87576 (WhatsApp)
-            </a>
-            <a
-              href="tel:+918073087576"
-              className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-            >
-              <Phone size={20} className="text-primary" />
-              +91 80730 87576
-            </a>
             <a
               href="mailto:care@saicchadevelopers.com"
               className="flex items-center gap-3 text-foreground transition-colors hover:text-primary"

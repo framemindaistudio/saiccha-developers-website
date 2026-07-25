@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "motion/react";
-import { Phone, WhatsappLogo, CalendarCheck, ArrowUp } from "@phosphor-icons/react/ssr";
+import { CalendarCheck, ArrowUp } from "@phosphor-icons/react/ssr";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
 type DockItem = {
@@ -12,14 +12,9 @@ type DockItem = {
   href?: string;
   external?: boolean;
   onClick?: () => void;
-  brand?: "whatsapp";
 };
 
-const linkItems: DockItem[] = [
-  { label: "Call", icon: Phone, href: "tel:+918073087576" },
-  { label: "WhatsApp", icon: WhatsappLogo, href: "https://wa.me/918073087576", external: true, brand: "whatsapp" },
-  { label: "Book a Site Visit", icon: CalendarCheck, href: "/contact" },
-];
+const linkItems: DockItem[] = [{ label: "Book a Site Visit", icon: CalendarCheck, href: "/contact" }];
 
 function DockButton({ item, mouseX }: { item: DockItem; mouseX: MotionValue<number> }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -34,17 +29,14 @@ function DockButton({ item, mouseX }: { item: DockItem; mouseX: MotionValue<numb
   const width = useSpring(widthSync, { mass: 0.15, stiffness: 220, damping: 18 });
 
   const Icon = item.icon;
-  const isWhatsapp = item.brand === "whatsapp";
 
   const content = (
     <motion.div
       ref={ref}
       style={{ width, height: width }}
-      className={`group relative flex cursor-pointer items-center justify-center rounded-full shadow-md shadow-foreground/10 ${
-        isWhatsapp ? "bg-whatsapp text-on-whatsapp" : "bg-surface-raised text-primary"
-      }`}
+      className="group relative flex cursor-pointer items-center justify-center rounded-full bg-surface-raised text-primary shadow-md shadow-foreground/10"
     >
-      <Icon size={20} weight={isWhatsapp ? "fill" : "regular"} />
+      <Icon size={20} weight="regular" />
       <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-foreground px-2.5 py-1 text-xs font-medium text-background opacity-0 transition-opacity group-hover:opacity-100">
         {item.label}
       </span>

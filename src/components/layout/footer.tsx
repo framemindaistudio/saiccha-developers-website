@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   EnvelopeSimple,
-  Phone,
   MapPin,
   FacebookLogo,
   InstagramLogo,
@@ -38,10 +37,6 @@ export function Footer() {
             Premium, transparent real estate development in Goa — from land to landmark.
           </p>
           <div className="flex flex-col gap-3 text-sm text-on-primary/85">
-            <a href="tel:+918073087576" className="flex items-center gap-2 hover:text-on-primary">
-              <Phone size={16} />
-              +91 80730 87576
-            </a>
             <a
               href="mailto:info@saicchadevelopers.com"
               className="flex items-center gap-2 hover:text-on-primary"

@@ -17,7 +17,7 @@ export function ProjectHero({
   location: string;
   status: string;
   image: string;
-  brochureUrl: string;
+  brochureUrl?: string;
 }) {
   return (
     <section className="relative flex min-h-[70dvh] items-end overflow-hidden bg-foreground">
@@ -53,15 +53,17 @@ export function ProjectHero({
               Book a Site Visit
               <ArrowRight size={18} />
             </Button>
-            <Button
-              href={brochureUrl}
-              size="lg"
-              variant="secondary"
-              className="border-on-primary/40 text-on-primary hover:border-on-primary hover:bg-on-primary/10"
-            >
-              <DownloadSimple size={18} />
-              Download Brochure
-            </Button>
+            {brochureUrl ? (
+              <Button
+                href={brochureUrl}
+                size="lg"
+                variant="secondary"
+                className="border-on-primary/40 text-on-primary hover:border-on-primary hover:bg-on-primary/10"
+              >
+                <DownloadSimple size={18} />
+                Download Brochure
+              </Button>
+            ) : null}
           </div>
         </Reveal>
       </Container>

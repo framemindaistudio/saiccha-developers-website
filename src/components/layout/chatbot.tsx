@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { X, WhatsappLogo, ArrowLeft, ArrowSquareOut } from "@phosphor-icons/react/ssr";
+import { X, ArrowLeft, ArrowSquareOut } from "@phosphor-icons/react/ssr";
 import { EyeTracking } from "@/components/motion/eye-tracking";
 import type { ChatbotConfig, ChatTopic, ChatFaq } from "@/lib/chatbot-data";
 
@@ -143,18 +143,6 @@ export function Chatbot({ config }: { config: ChatbotConfig }) {
                   <p className="text-sm leading-relaxed text-muted-foreground">{view.faq.answer}</p>
                 </div>
               ) : null}
-            </div>
-
-            <div className="flex gap-2 border-t border-border p-4">
-              <a
-                href={config.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-button bg-whatsapp px-3 py-2 text-xs font-medium text-on-whatsapp transition-colors hover:bg-whatsapp-hover"
-              >
-                <WhatsappLogo size={14} weight="fill" />
-                WhatsApp
-              </a>
             </div>
           </motion.div>
         ) : null}
