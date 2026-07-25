@@ -28,9 +28,6 @@ export function Navbar() {
             priority
             className="h-14 w-auto"
           />
-          <span className="font-display text-base font-medium tracking-tight text-foreground sm:text-lg">
-            Saiccha Developers
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
