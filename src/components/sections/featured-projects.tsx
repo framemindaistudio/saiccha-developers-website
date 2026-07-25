@@ -18,7 +18,7 @@ export function FeaturedProjects() {
         <Reveal>
           <SectionHeading
             title="Where we're building right now"
-            subtitle="A farm-plot community in Amboli Ghat, and a plotted Gurukul Eco World scheme beside JagKalyan Tarak Gurukul."
+            subtitle="A farm-plot community in Amboli Ghat, and a plotted Saiccha Wisdom Valley scheme beside JagKalyan Tarak Gurukul."
           />
         </Reveal>
 

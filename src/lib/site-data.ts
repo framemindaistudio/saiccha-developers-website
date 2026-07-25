@@ -117,7 +117,7 @@ export const ongoingProjects: Project[] = [
   {
     slug: "jagkalyan-tarak-gurukul",
     name: "JagKalyan Tarak Gurukul",
-    tagline: "A gated, plotted Gurukul Eco World scheme beside the Gurukul campus, in Dodamarg, North Goa.",
+    tagline: "A gated, plotted Saiccha Wisdom Valley scheme beside the Gurukul campus, in Dodamarg, North Goa.",
     location: "Dodamarg, North Goa",
     status: "Phase 1 Underway",
     href: "/projects/jagkalyan-tarak-gurukul",

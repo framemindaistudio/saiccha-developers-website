@@ -43,7 +43,7 @@ export default function ProjectsPage() {
               Ongoing
             </span>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Rudra Valley&rsquo;s farm plots, and the Gurukul Eco World scheme beside JagKalyan Tarak
+              Rudra Valley&rsquo;s farm plots, and the Saiccha Wisdom Valley scheme beside JagKalyan Tarak
               Gurukul.
             </p>
           </a>

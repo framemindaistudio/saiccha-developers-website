@@ -32,11 +32,11 @@ const sections = [
 ];
 
 const zoomGalleryImages = [
-  { src: "/images/jk-amenity-cricket-stadium.jpg", alt: "Gurukul Eco World, cricket stadium" },
-  { src: "/images/jk-amenity-water-body.jpg", alt: "Gurukul Eco World, landscaped water body" },
-  { src: "/images/jk-amenity-sports-centre.jpg", alt: "Gurukul Eco World, sports centre" },
-  { src: "/images/jk-amenity-shopping-centre.jpg", alt: "Gurukul Eco World, shopping centre" },
-  { src: "/images/jk-amenity-watch-tower.jpg", alt: "Gurukul Eco World, perimeter watch tower" },
+  { src: "/images/jk-amenity-cricket-stadium.jpg", alt: "Saiccha Wisdom Valley, cricket stadium" },
+  { src: "/images/jk-amenity-water-body.jpg", alt: "Saiccha Wisdom Valley, landscaped water body" },
+  { src: "/images/jk-amenity-sports-centre.jpg", alt: "Saiccha Wisdom Valley, sports centre" },
+  { src: "/images/jk-amenity-shopping-centre.jpg", alt: "Saiccha Wisdom Valley, shopping centre" },
+  { src: "/images/jk-amenity-watch-tower.jpg", alt: "Saiccha Wisdom Valley, perimeter watch tower" },
 ];
 
 export default function JagKalyanTarakGurukulPage() {
@@ -75,7 +75,7 @@ export default function JagKalyanTarakGurukulPage() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-image border border-border">
               <Image
                 src="/images/eco-living-layout-3d.jpg"
-                alt="3D layout render of the Gurukul Eco World scheme at JagKalyan Tarak Gurukul, Village Khanyale"
+                alt="3D layout render of the Saiccha Wisdom Valley scheme at JagKalyan Tarak Gurukul, Village Khanyale"
                 fill
                 sizes="(min-width: 1024px) 900px, 100vw"
                 className="object-contain bg-surface-raised"

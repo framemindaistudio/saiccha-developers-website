@@ -38,7 +38,7 @@ export const chatbotConfig: ChatbotConfig = {
       id: "jagkalyan",
       label: "JagKalyan Tarak Gurukul",
       reply:
-        "Gurukul Eco World is a gated, plotted scheme beside the JagKalyan Tarak Gurukul campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission. Phase 1 has released 1,000 of 3,000 planned plots.",
+        "Saiccha Wisdom Valley is a gated, plotted scheme beside the JagKalyan Tarak Gurukul campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission. Phase 1 has released 1,000 of 3,000 planned plots.",
       href: "/projects/jagkalyan-tarak-gurukul",
       hrefLabel: "See the project",
     },
