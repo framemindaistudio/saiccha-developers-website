@@ -35,6 +35,14 @@ export default function AboutPage() {
       <Container className="max-w-4xl">
         <ProjectSection id="story" title="Our Story">
           <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">{ourStory}</p>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-image">
+            <Image
+              src="/images/about-residence-exterior.jpg"
+              alt="A Saiccha Developers residence, cream stucco exterior with terracotta roof"
+              fill
+              className="object-cover"
+            />
+          </div>
         </ProjectSection>
 
         <ProjectSection id="vision-mission" title="Vision & Mission">
@@ -55,6 +63,14 @@ export default function AboutPage() {
             Building trust, one property at a time.
           </p>
           <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">{goalStatement}</p>
+          <div className="relative aspect-square w-full max-w-xl overflow-hidden rounded-image">
+            <Image
+              src="/images/about-towers-dusk.jpg"
+              alt="A Saiccha Developers residential tower at dusk"
+              fill
+              className="object-cover"
+            />
+          </div>
         </ProjectSection>
 
         <ProjectSection id="values" title="Core Values">
