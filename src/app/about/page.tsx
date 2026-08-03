@@ -11,6 +11,7 @@ import {
   ourStory,
   vision,
   mission,
+  goalStatement,
   coreValues,
   leadership,
   milestones,
@@ -47,6 +48,13 @@ export default function AboutPage() {
               <p className="text-base leading-relaxed text-muted-foreground">{mission}</p>
             </div>
           </div>
+        </ProjectSection>
+
+        <ProjectSection id="goal" title="Our Goal">
+          <p className="max-w-2xl font-display text-lg tracking-tight text-primary">
+            Building trust, one property at a time.
+          </p>
+          <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">{goalStatement}</p>
         </ProjectSection>
 
         <ProjectSection id="values" title="Core Values">

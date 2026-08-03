@@ -1,14 +1,14 @@
-// Placeholder company content — replace with real bios, milestones, and
-// legal documentation per design/project-plan.md Section 4.
-
 export const ourStory =
-  "Saiccha Developers started with a single question: why does buying a home in Goa so often mean choosing between a good location and a transparent developer. Since then, every project has been built around the same answer, publish the plan, hold the timeline, and build something that's still standing the way it was promised decades later.";
+  "At Saiccha Developers, we are committed to helping you find the perfect property that suits your lifestyle and investment goals. With years of experience in the real estate market, our team provides expert guidance, personalized service, and transparent solutions to make buying, selling, or investing seamless and stress-free. We believe in building long-term relationships with our clients, founded on trust, integrity, and results.";
 
 export const vision =
-  "To be Goa's most trusted name in land and residential development, known as much for what we disclose as for what we build.";
+  "To be a trusted and leading name in the real estate industry by creating value-driven, transparent, and customer-centric experiences. We envision a future where every client finds not just a property, but a place that truly fits their lifestyle, dreams, and investment aspirations.";
 
 export const mission =
-  "Deliver premium, sustainably-built communities on a published timeline, with construction progress, pricing, and legal documentation open to every buyer and investor from day one.";
+  "Our mission is to simplify real estate for everyone through expert guidance, personalized service, and ethical practices. We strive to turn your real estate goals into reality by offering seamless property solutions and building long-term relationships founded on trust, integrity, and excellence.";
+
+export const goalStatement =
+  "To provide every client with the ideal property that perfectly aligns with their lifestyle and investment objectives. We aim to make real estate transactions seamless, transparent, and rewarding, while building lasting relationships founded on trust, integrity, and excellence.";
 
 export const coreValues = [
   { icon: "ShieldCheck", title: "Transparency", body: "Pricing, progress, and paperwork are published, not disclosed on request." },
