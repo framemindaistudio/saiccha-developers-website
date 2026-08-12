@@ -11,7 +11,6 @@ import { PricingTable } from "@/components/project/pricing-table";
 import { ProgressTracker } from "@/components/project/progress-tracker";
 import { MapEmbed } from "@/components/project/map-embed";
 import { StatHighlightGrid } from "@/components/project/stat-highlight-grid";
-import { PhaseBar } from "@/components/project/phase-bar";
 import { ZoomParallax } from "@/components/motion/zoom-parallax";
 import { jagkalyanTarakGurukul } from "@/lib/projects-data";
 
@@ -66,21 +65,25 @@ export default function JagKalyanTarakGurukulPage() {
               {jagkalyanTarakGurukul.masterPlan.body}
             </p>
             <StatHighlightGrid stats={jagkalyanTarakGurukul.masterPlan.stats} />
-            <div className="flex flex-col gap-2 rounded-card border border-border bg-surface p-5">
-              <span className="text-xs font-medium text-muted-foreground">
-                Total vision, by phase
-              </span>
-              <PhaseBar phases={jagkalyanTarakGurukul.masterPlan.phases} unit="plots" />
-            </div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-image border border-border">
+            <div className="relative aspect-[3/4] w-full max-w-lg overflow-hidden rounded-image border border-border">
               <Image
                 src="/images/eco-living-layout-3d.jpg"
                 alt="3D layout render of the Saiccha Wisdom Valley scheme at JagKalyan Tarak Gurukul, Village Khanyale"
                 fill
-                sizes="(min-width: 1024px) 900px, 100vw"
+                sizes="(min-width: 1024px) 512px, 100vw"
                 className="object-contain bg-surface-raised"
               />
             </div>
+            <Button
+              href={jagkalyanTarakGurukul.ecoLivingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+              className="w-fit"
+            >
+              Explore Saiccha Wisdom Valley
+              <ArrowSquareOut size={16} />
+            </Button>
           </ProjectSection>
 
           <ProjectSection id="location" title="Location Map">

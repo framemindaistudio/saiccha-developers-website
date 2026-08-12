@@ -90,18 +90,14 @@ export const jagkalyanTarakGurukul = {
   location: "Village Khanyale, Dodamarg Taluka, Sindhudurg District, Maharashtra",
   status: "Phase 1 Underway",
   overview:
-    "JagKalyan Tarak Gurukul is a joint initiative with JagKalyan Holistic Mission: an integrated campus for holistic education, wellness, and research, paired with Saiccha Wisdom Valley, a gated, plotted residential scheme immediately beside it. Saiccha Wisdom Valley is laid out across two plot formats along a network of wide internal roads, anchored by a cricket stadium, sports and shopping centres, a landscaped water body, and a monumental entrance gate, all directly adjoining the Gurukul campus itself.",
+    "JagKalyan Tarak Gurukul is a joint initiative with JagKalyan Holistic Mission: an integrated campus for holistic education, wellness, and research, paired with Saiccha Wisdom Valley, a gated, plotted residential scheme immediately beside it. Saiccha Wisdom Valley is laid out across three plot formats along a network of wide internal roads, anchored by a cricket stadium, sports and shopping centres, a landscaped water body, and a monumental entrance gate, all directly adjoining the Gurukul campus itself.",
   masterPlan: {
-    body: "Phase 1 releases 1,000 plots now, out of 3,000 planned across the full scheme, laid out along 15.0 m and 12.0 m internal roads in two plot formats. The amenity cluster sits at the southern end of the site, adjoining the Gurukul campus, with the decorative entrance gate and two of the scheme's four watch towers at the northern entrance.",
+    body: "Saiccha Wisdom Valley is a fully engineered, gated plotted scheme of 2,336 plots across three formats, laid out along 15.0 m and 12.0 m internal roads. The amenity cluster sits at the southern end of the site, adjoining the Gurukul campus, with the decorative entrance gate and two of the scheme's four watch towers at the northern entrance.",
     stats: [
-      { icon: "Ruler", value: "1,000", label: "Phase 1 plots" },
-      { icon: "GridFour", value: "3,000", label: "Total planned plots" },
-      { icon: "Path", value: "2", label: "Plot formats (500 & 150 sq.m)" },
+      { icon: "GridFour", value: "2,336", label: "Total plots across the scheme" },
+      { icon: "Ruler", value: "3", label: "Plot formats — 500, 300 & 150 sq.m" },
+      { icon: "Path", value: "42", label: "Acres of internal roads" },
       { icon: "Sparkle", value: "8", label: "On-site amenities" },
-    ],
-    phases: [
-      { label: "Phase 1", acres: 1000 },
-      { label: "Remaining phases", acres: 2000 },
     ],
   },
   nearby: {
@@ -118,7 +114,7 @@ export const jagkalyanTarakGurukul = {
     { icon: "Buildings", title: "JTG Complex", body: "Directly adjoining the JagKalyan Tarak Gurukul campus itself.", image: "/images/jk-main-building-exterior.jpg" },
   ],
   layoutPlan: {
-    body: "Two plot formats run along the scheme's internal road network: a 500 sq.m format along the main roads, and a more compact 150 sq.m format for buyers seeking a smaller footprint. Roads are laid out at 15.0 m and 12.0 m widths. Detailed plot-by-plot dimensions and numbering are being finalized with the client and will be added here.",
+    body: "Three plot formats run along the scheme's internal road network: a 500 sq.m format along the main roads, a 300 sq.m format along select road frontages, and a more compact 150 sq.m format for buyers seeking a smaller footprint — 2,336 plots in total. Roads are laid out at 15.0 m and 12.0 m widths. Detailed plot-by-plot dimensions and numbering are being finalized with the client and will be added here.",
   },
   pricing: [],
   constructionProgress: {
@@ -128,4 +124,5 @@ export const jagkalyanTarakGurukul = {
   },
   brochureUrl: "#",
   websiteUrl: "https://www.jagkalyantarakgurukul.com/",
+  ecoLivingUrl: "https://www.jagkalyantarakgurukul.com/eco-living",
 };
