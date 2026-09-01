@@ -31,7 +31,6 @@ export const milestones = [
   { icon: "House", year: "2017", title: "First residential bungalow project completed and handed over" },
   { icon: "Buildings", year: "2020", title: "First commercial complex delivered" },
   { icon: "ClipboardText", year: "2023", title: "Rudra Valley masterplan approved" },
-  { icon: "Handshake", year: "2026", title: "Co-founded JagKalyan Holistic Mission, an independent education and wellness initiative" },
 ];
 
 export const awards = [

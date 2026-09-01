@@ -35,14 +35,6 @@ export const chatbotConfig: ChatbotConfig = {
       hrefLabel: "See the master plan",
     },
     {
-      id: "jagkalyan",
-      label: "JagKalyan Tarak Gurukul",
-      reply:
-        "Saiccha Wisdom Valley is a gated, plotted scheme beside the JagKalyan Tarak Gurukul campus in Dodamarg, North Goa, a joint initiative with JagKalyan Holistic Mission. Phase 1 has released 1,000 of 3,000 planned plots.",
-      href: "/projects/jagkalyan-tarak-gurukul",
-      hrefLabel: "See the project",
-    },
-    {
       id: "services",
       label: "Our Services",
       reply:

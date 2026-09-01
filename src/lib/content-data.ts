@@ -52,7 +52,6 @@ export const futureProjects = [
 ];
 
 export const pressReleases = [
-  { title: "Saiccha Developers announces JagKalyan Tarak Gurukul masterplan approval", date: "May 2026" },
   { title: "Saiccha Developers joins Goa green-building working group", date: "April 2026" },
   { title: "Rudra Valley reaches 40% construction milestone", date: "February 2026" },
 ];
@@ -64,7 +63,6 @@ export const mediaVideos = [
 
 export const mediaEvents = [
   { title: "Rudra Valley site visit weekend", date: "August 2026" },
-  { title: "JagKalyan Tarak Gurukul investor briefing, Panaji", date: "September 2026" },
 ];
 
 export const galleryCategories = [

@@ -8,7 +8,6 @@ import { ongoingProjects } from "@/lib/site-data";
 
 const projectImages: Record<string, string> = {
   "rudra-valley": "/images/rv-cinematic-aerial.jpg",
-  "jagkalyan-tarak-gurukul": "/images/eco-living-layout-3d.jpg",
 };
 
 export function FeaturedProjects() {
@@ -18,7 +17,7 @@ export function FeaturedProjects() {
         <Reveal>
           <SectionHeading
             title="Where we're building right now"
-            subtitle="A farm-plot community in Amboli Ghat, and a plotted Saiccha Wisdom Valley scheme beside JagKalyan Tarak Gurukul."
+            subtitle="A premium farm-plot community in the misty hills of Amboli Ghat, on the Goa border."
           />
         </Reveal>
 

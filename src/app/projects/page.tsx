@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 
 const projectImages: Record<string, string> = {
   "rudra-valley": "/images/rv-cinematic-aerial.jpg",
-  "jagkalyan-tarak-gurukul": "/images/jk-amenity-water-body.jpg",
 };
 
 export default function ProjectsPage() {
@@ -43,8 +42,7 @@ export default function ProjectsPage() {
               Ongoing
             </span>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Rudra Valley&rsquo;s farm plots, and the Saiccha Wisdom Valley scheme beside JagKalyan Tarak
-              Gurukul.
+              Rudra Valley&rsquo;s premium farm plots in Amboli Ghat, on the Goa border.
             </p>
           </a>
           <a

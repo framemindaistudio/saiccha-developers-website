@@ -40,20 +40,6 @@ export default function ReraPage() {
             </Link>
           </div>
         </div>
-
-        <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
-          JagKalyan Tarak Gurukul is an independent initiative with its own registration and
-          legal documentation, published on its own site at{" "}
-          <a
-            href="https://www.jagkalyan.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-primary hover:text-primary-hover"
-          >
-            jagkalyan.org
-          </a>
-          .
-        </p>
       </Container>
     </>
   );
