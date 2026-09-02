@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://saicchadevelopers.com"),
   title: "Saiccha Developers | Build Better. Live Better.",
   description:
-    "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities, led by Rudra Valley.",
+    "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities.",
   openGraph: {
     title: "Saiccha Developers | Build Better. Live Better.",
     description:
-      "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities, led by Rudra Valley.",
+      "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities.",
     url: "/",
     siteName: "Saiccha Developers",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Saiccha Developers | Build Better. Live Better.",
     description:
-      "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities, led by Rudra Valley.",
+      "Saiccha Developers is a Goa-based real estate developer crafting premium, sustainable residential and township communities.",
   },
 };
 

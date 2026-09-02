@@ -42,13 +42,13 @@ export default function CompletedProjectsPage() {
           </p>
           <div className="grid gap-8 sm:grid-cols-2">
             <BeforeAfterSlider
-              beforeSrc="/images/rudra-valley-villas.jpg"
-              afterSrc="/images/hero-rudra-valley-aerial.jpg"
+              beforeSrc="/images/about-residence-exterior.jpg"
+              afterSrc="/images/about-towers-dusk.jpg"
               label="Land Development"
             />
             <BeforeAfterSlider
-              beforeSrc="/images/rv-cinematic-entrance.jpg"
-              afterSrc="/images/rv-cinematic-clubhouse.jpg"
+              beforeSrc="/images/about-towers-dusk.jpg"
+              afterSrc="/images/about-residence-exterior.jpg"
               label="Residential Bungalow"
             />
           </div>

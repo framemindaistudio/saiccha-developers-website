@@ -28,12 +28,6 @@ export const primaryNav: NavGroup[] = [
     href: "/projects",
     sections: [
       {
-        heading: "Ongoing Projects",
-        links: [
-          { label: "Rudra Valley", href: "/projects/rudra-valley" },
-        ],
-      },
-      {
         links: [
           { label: "Completed Projects", href: "/projects/completed" },
           { label: "Future Projects", href: "/projects/future" },
@@ -60,7 +54,6 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
   {
     title: "Projects",
     links: [
-      { label: "Rudra Valley", href: "/projects/rudra-valley" },
       { label: "Completed Projects", href: "/projects/completed" },
       { label: "Future Projects", href: "/projects/future" },
     ],
@@ -103,22 +96,11 @@ export type Project = {
   imageSeed: string;
 };
 
-export const ongoingProjects: Project[] = [
-  {
-    slug: "rudra-valley",
-    name: "Rudra Valley",
-    tagline: "Premium farm plots and farmhouses in the misty hills of Amboli Ghat, on the Goa border.",
-    location: "Amboli Ghat, Maharashtra",
-    status: "Bookings Open",
-    href: "/projects/rudra-valley",
-    imageSeed: "rudra-valley-hero",
-  },
-];
+export const ongoingProjects: Project[] = [];
 
 export const highlights = [
   { icon: "Buildings", value: "14+", label: "Years building in Goa" },
   { icon: "Ruler", value: "12", label: "Lakh+ sq. ft. developed" },
-  { icon: "House", value: "3", label: "Active flagship developments" },
   { icon: "ShieldCheck", value: "100%", label: "RERA-registered projects" },
 ];
 
@@ -145,27 +127,9 @@ export const whyChooseUs = [
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "We tracked our unit's construction month by month before we ever had to ask. That kind of visibility is rare.",
-    name: "Prakash Naik",
-    role: "FarmOwner, Rudra Valley",
-  },
-  {
-    quote:
-      "Documentation was ready before we asked for it. Made the loan approval process considerably smoother.",
-    name: "Rohan D'Souza",
-    role: "FarmOwner, Rudra Valley",
-  },
-];
+export const testimonials: { quote: string; name: string; role: string }[] = [];
 
 export const latestNews = [
-  {
-    title: "Rudra Valley crosses foundation stage across all clusters",
-    date: "June 2026",
-    href: "/media-centre",
-  },
   {
     title: "Saiccha Developers joins Goa green-building working group",
     date: "April 2026",

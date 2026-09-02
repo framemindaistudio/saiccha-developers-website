@@ -46,24 +46,20 @@ export const futureProjects = [
   {
     icon: "Buildings",
     name: "Saiccha Business Park",
-    description: "A planned commercial and office park adjacent to Rudra Valley.",
+    description: "A planned commercial and office park in Goa, early site assessment underway.",
     status: "Masterplanning",
   },
 ];
 
 export const pressReleases = [
   { title: "Saiccha Developers joins Goa green-building working group", date: "April 2026" },
-  { title: "Rudra Valley reaches 40% construction milestone", date: "February 2026" },
 ];
 
 export const mediaVideos = [
-  { title: "Rudra Valley: aerial construction update, Q2 2026" },
   { title: "Meet the team behind Saiccha Developers" },
 ];
 
-export const mediaEvents = [
-  { title: "Rudra Valley site visit weekend", date: "August 2026" },
-];
+export const mediaEvents: { title: string; date: string }[] = [];
 
 export const galleryCategories = [
   { key: "photos", title: "Photos", body: "Project and campus photography across all active developments." },
@@ -122,7 +118,6 @@ export const paymentPlan = [
 
 export const customerCareDocuments = [
   { title: "Sample sale agreement", type: "PDF" },
-  { title: "Rudra Valley layout plan", type: "PDF" },
   { title: "Payment schedule template", type: "PDF" },
 ];
 

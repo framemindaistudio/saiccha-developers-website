@@ -27,14 +27,6 @@ export const chatbotConfig: ChatbotConfig = {
   topicsIntro: "What would you like to know about?",
   topics: [
     {
-      id: "rudra-valley",
-      label: "Rudra Valley",
-      reply:
-        "Premium farm plots and farmhouses in Amboli Ghat, on the Goa-Maharashtra border. Phase 1 spans 233 acres, with a wider 467-acre Phase 2 vision including a dedicated 48-acre luxury resort. Bookings are open now.",
-      href: "/projects/rudra-valley",
-      hrefLabel: "See the master plan",
-    },
-    {
       id: "services",
       label: "Our Services",
       reply:
@@ -62,7 +54,7 @@ export const chatbotConfig: ChatbotConfig = {
   faqs: [
     {
       id: "rera",
-      question: "Is Rudra Valley RERA-registered?",
+      question: "Are your projects RERA-registered?",
       answer:
         "RERA registration numbers are published per project as they're issued. Check the RERA Details page for the current status of each active project.",
     },
@@ -71,17 +63,6 @@ export const chatbotConfig: ChatbotConfig = {
       question: "How do I book a site visit?",
       answer:
         "Use the Book a Site Visit button, or send us your details through the enquiry form and the team will follow up directly, not through a call centre.",
-    },
-    {
-      id: "payment",
-      question: "What's the payment plan for Rudra Valley?",
-      answer:
-        "Payments are staged against construction milestones, booking, agreement, foundation, structure, finishing, and handover. Full details are shared during the booking process.",
-    },
-    {
-      id: "location",
-      question: "Where is Rudra Valley located?",
-      answer: "Amboli Ghat, on the Goa-Maharashtra border, about 50 km from Goa International Airport.",
     },
     {
       id: "contact",

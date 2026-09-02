@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // Site-wide maintenance switch. Set to false (and redeploy) to bring the site back online.
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 const MAINTENANCE_HTML = `<!DOCTYPE html>
 <html lang="en">

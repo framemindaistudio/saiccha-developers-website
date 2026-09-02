@@ -8,8 +8,8 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[85dvh] items-end overflow-hidden bg-foreground">
       <Image
-        src="/images/hero-rudra-valley-aerial.jpg"
-        alt="Aerial view of Rudra Valley, a Saiccha Developers residential community in Goa at golden hour"
+        src="/images/about-towers-dusk.jpg"
+        alt="A Saiccha Developers residential tower at dusk"
         fill
         priority
         sizes="100vw"
@@ -20,10 +20,6 @@ export function Hero() {
 
       <Container className="relative z-10 pb-20 pt-32">
         <Reveal className="flex max-w-xl flex-col gap-6">
-          <div className="flex items-center gap-1.5 text-sm font-medium text-on-primary/70">
-            <span>Now building</span>
-            <span className="text-accent">Rudra Valley</span>
-          </div>
           <h1 className="font-display text-5xl leading-[1.05] tracking-tight text-on-primary md:text-6xl lg:text-7xl">
             Build Better.
             <br />

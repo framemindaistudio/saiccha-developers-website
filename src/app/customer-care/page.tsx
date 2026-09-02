@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { DownloadSimple, ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/ssr";
+import { DownloadSimple, EnvelopeSimple } from "@phosphor-icons/react/ssr";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { ProjectSection } from "@/components/project/project-section";
 import { FaqAccordion } from "@/components/project/faq-accordion";
-import { rudraValley } from "@/lib/projects-data";
 import { paymentPlan, customerCareDocuments, customerCareFaqs } from "@/lib/content-data";
 
 export const metadata: Metadata = {
@@ -23,25 +21,6 @@ export default function CustomerCarePage() {
       />
 
       <Container className="max-w-4xl">
-        <ProjectSection id="construction-updates" title="Construction Updates">
-          <Link
-            href="/projects/rudra-valley#progress"
-            className="group flex items-center justify-between gap-4 rounded-card border border-border p-6"
-          >
-            <div>
-              <p className="text-sm font-medium text-foreground">{rudraValley.name}</p>
-              <p className="text-xs text-muted-foreground">
-                {rudraValley.constructionProgress.phase} &middot; updated{" "}
-                {rudraValley.constructionProgress.updated}
-              </p>
-            </div>
-            <ArrowRight
-              size={18}
-              className="shrink-0 text-primary transition-transform group-hover:translate-x-1"
-            />
-          </Link>
-        </ProjectSection>
-
         <ProjectSection id="documents" title="Download Documents">
           <div className="flex flex-col divide-y divide-border border-t border-border">
             {customerCareDocuments.map((doc) => (

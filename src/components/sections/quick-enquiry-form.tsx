@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 
 const projectOptions = [
   "General enquiry",
-  "Rudra Valley",
   "Investor enquiry",
 ];
 

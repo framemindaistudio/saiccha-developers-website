@@ -30,7 +30,6 @@ export const milestones = [
   { icon: "Mountains", year: "2012", title: "Saiccha Developers founded, first land parcels acquired in Goa" },
   { icon: "House", year: "2017", title: "First residential bungalow project completed and handed over" },
   { icon: "Buildings", year: "2020", title: "First commercial complex delivered" },
-  { icon: "ClipboardText", year: "2023", title: "Rudra Valley masterplan approved" },
 ];
 
 export const awards = [
@@ -103,7 +102,7 @@ export const sustainabilityPillars = [
   {
     icon: "SunHorizon",
     title: "Solar Energy",
-    body: "Common-area power and street lighting run on solar across active developments, with resident rooftop options at Rudra Valley.",
+    body: "Common-area power and street lighting run on solar across active developments, with resident rooftop options at select communities.",
   },
   {
     icon: "CloudRain",

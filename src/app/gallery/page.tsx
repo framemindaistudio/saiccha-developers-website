@@ -11,15 +11,7 @@ export const metadata: Metadata = {
   description: "Photos, drone videos, project walkthroughs, and customer events from Saiccha Developers.",
 };
 
-const photos = [
-  { src: "/images/rv-cinematic-aerial.jpg", alt: "Rudra Valley, cinematic aerial view" },
-  { src: "/images/rv-cinematic-entrance.jpg", alt: "Rudra Valley, guarded entrance boulevard" },
-  { src: "/images/rv-cinematic-clubhouse.jpg", alt: "Rudra Valley, clubhouse" },
-  { src: "/images/rv-cinematic-spa.jpg", alt: "Rudra Valley, spa and pool" },
-  { src: "/images/rv-cinematic-canal.jpg", alt: "Rudra Valley, recreational canal" },
-  { src: "/images/rv-cinematic-tennis.jpg", alt: "Rudra Valley, tennis lawn" },
-  { src: "/images/rv-cinematic-restaurant.jpg", alt: "Rudra Valley, restaurant" },
-];
+const photos: { src: string; alt: string }[] = [];
 
 export default function GalleryPage() {
   return (
@@ -35,12 +27,14 @@ export default function GalleryPage() {
           <ProjectSection key={cat.key} id={cat.key} title={cat.title}>
             <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{cat.body}</p>
 
-            {cat.key === "photos" ? (
+            {cat.key === "photos" && photos.length > 0 ? (
               <ThreeDCarousel images={photos} />
             ) : (
               <div className="flex items-center gap-4 rounded-card border border-dashed border-border-strong p-6 text-sm text-muted-foreground">
                 <PlayCircle size={24} className="shrink-0 text-primary" weight="duotone" />
-                Video content to be added once footage is supplied by the client.
+                {cat.key === "photos"
+                  ? "Photos to be added once new project photography is available."
+                  : "Video content to be added once footage is supplied by the client."}
               </div>
             )}
           </ProjectSection>

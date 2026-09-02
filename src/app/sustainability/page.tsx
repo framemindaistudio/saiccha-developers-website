@@ -24,8 +24,8 @@ export default function SustainabilityPage() {
         <div className="relative mx-auto mt-14 aspect-[21/9] w-full max-w-[1400px] overflow-hidden rounded-image px-6 md:px-10">
           <div className="relative h-full w-full overflow-hidden rounded-image">
             <Image
-              src="/images/rv-cinematic-canal.jpg"
-              alt="The recreational canal and green landscaping at Rudra Valley"
+              src="/images/about-residence-exterior.jpg"
+              alt="A Saiccha Developers residence with landscaped surroundings"
               fill
               sizes="100vw"
               className="object-cover"
